@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <script defer src="src/script.js"></script>
+</head>
+<body class="bg-[#E2E2E2] dark:bg-bgdark">
+    <header>
+        <div class="h-16 flex justify-center bg-secondary dark:bg-darksecondary px-3 md:px-0">
+            <div class="max-w-5xl w-full flex items-center justify-between">
+                <!-- Title/Search -->
+                <div class="flex space-x-5">
+                    <!-- Title -->
+                    <div>
+                        <h1 class="text-2xl font-bold dark:text-gray-300">ANIME<span class="text-primary">WORLD</span><span class="text-sm text-primary">tv</span></h1>
+                    </div>
+                    <!-- Search -->
+                    <div class="md:block hidden">
+                        <form class="flex items-center">   
+                            <div class="relative w-full">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <input type="text" id="simple-search" class="bg-gray-50 dark:bg-bgdark border border-gray-300 text-gray-900 dark:border-gray-500 dark:text-gray-300 text-xs rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-[130%] pl-10 p-2.5 focus:outline-none" placeholder="Search" required>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Login/User -->
+                <div class="flex space-x-8 items-center">
+                    <!-- Toggle -->
+                    <div class="flex items-center justify-center h-screen">
+                        <label for="toggle" class="flex items-center cursor-pointer">
+                          <div class="relative">
+                            <input type="checkbox" id="toggle" class="sr-only" />
+                            <div class="block bg-gray-600 w-8 h-4 rounded-full"></div>
+                            <div class="dot absolute left-1 top-[2px] bg-white w-3 h-3 rounded-full transition"></div>
+                          </div>
+                        </label>
+                      </div>
+                    <div class="cursor-pointer">
+                        <svg class="dark:fill-gray-300" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px" viewBox="0 0 24 24" width="30px" fill="#000000"><g><rect fill="none" height="30" width="30"/></g><g><g><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5zm10.79-1.38C16.45 15.8 14.32 15 12 15s-4.45.8-6.14 2.12C4.7 15.73 4 13.95 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12z"/><path d="M12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/></g></g></svg>
+                    </div>
+                    <!-- Hamburger Menu -->
+                    <button class="block md:hidden" onclick="handleButtonNavbar()">
+                        <svg fill="#00000" width="20px" height="20px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#00000" class="home-hover">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            <g id="SVGRepo_iconCarrier"> <path d="M0.844 6.050c-0.256-0.256-0.381-0.581-0.381-0.975s0.125-0.719 0.381-0.975 0.581-0.381 0.975-0.381h28.512c0.394 0 0.719 0.125 0.975 0.381s0.381 0.581 0.381 0.975-0.125 0.719-0.381 0.975-0.581 0.381-0.975 0.381h-28.512c-0.394 0-0.719-0.125-0.975-0.381zM31.306 14.963c0.256 0.256 0.381 0.581 0.381 0.975s-0.125 0.719-0.381 0.975-0.581 0.381-0.975 0.381h-28.512c-0.394 0-0.719-0.125-0.975-0.381s-0.381-0.581-0.381-0.975 0.125-0.719 0.381-0.975 0.581-0.381 0.975-0.381h28.512c0.394 0 0.719 0.125 0.975 0.381zM31.306 25.819c0.256 0.256 0.381 0.581 0.381 0.975s-0.125 0.719-0.381 0.975-0.581 0.381-0.975 0.381h-28.512c-0.394 0-0.719-0.125-0.975-0.381s-0.381-0.581-0.381-0.975 0.125-0.719 0.381-0.975 0.581-0.381 0.975-0.381h28.512c0.394 0 0.719 0.131 0.975 0.381z"/> </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar -->
+    <nav>
+        <!-- Desktop Navbar -->
+        <div class=" bg-primary dark:bg-gray-700 mb-2 relative hidden md:block">
+            <ul>
+                <div class="flex max-w-5xl mx-auto text-white space-x-7">
+                    <li>
+                        <div class="flex items-center justify-center space-x-2 cursor-pointer hover:bg-[#10569c] p-2 home-hover"  onmouseover="menuHover()" onmouseout="menuHover()">
+                            <svg fill="#ededed" width="20px" height="20px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ededed" class="home-hover">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                <g id="SVGRepo_iconCarrier"> <path d="M0.844 6.050c-0.256-0.256-0.381-0.581-0.381-0.975s0.125-0.719 0.381-0.975 0.581-0.381 0.975-0.381h28.512c0.394 0 0.719 0.125 0.975 0.381s0.381 0.581 0.381 0.975-0.125 0.719-0.381 0.975-0.581 0.381-0.975 0.381h-28.512c-0.394 0-0.719-0.125-0.975-0.381zM31.306 14.963c0.256 0.256 0.381 0.581 0.381 0.975s-0.125 0.719-0.381 0.975-0.581 0.381-0.975 0.381h-28.512c-0.394 0-0.719-0.125-0.975-0.381s-0.381-0.581-0.381-0.975 0.125-0.719 0.381-0.975 0.581-0.381 0.975-0.381h28.512c0.394 0 0.719 0.125 0.975 0.381zM31.306 25.819c0.256 0.256 0.381 0.581 0.381 0.975s-0.125 0.719-0.381 0.975-0.581 0.381-0.975 0.381h-28.512c-0.394 0-0.719-0.125-0.975-0.381s-0.381-0.581-0.381-0.975 0.125-0.719 0.381-0.975 0.581-0.381 0.975-0.381h28.512c0.394 0 0.719 0.131 0.975 0.381z"/> </g>
+                            </svg>
+                            <a href="">Home</a>
+                        </div>
+                        <div class="bg-secondary dark:bg-darksecondarycondary absolute text-black hidden home-visible hover:block z-50">
+                            <div class="grid grid-cols-4 gap-2 text-sm px-4 py-2">
+                                <div class="p-1 hover:bg-gray-300 cursor-pointer">Halo dunia</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="p-2 hover:bg-[#10569c]">
+                            <a href="">List</a>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <!-- Mobile Navbar -->
+        <div class="mobile-nav absolute w-[45vh] h-screen bg-primary -translate-x-full ease-in-out duration-200 top-0 z-50 p-3 text-white">
+            <!-- Title Navbar -->
+            <div class="flex items-center space-x-5">
+                <h3>Menu</h3>
+                <div class="w-[60%] h-[2px] bg-white mt-1"></div>
+                <!-- close button -->
+                <button onclick="handleButtonNavbar()">
+                    <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                        <g id="SVGRepo_iconCarrier"> <g id="Menu / Close_SM"> <path id="Vector" d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke="#f5f5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g> </g>
+                    </svg>
+                </button>
+            </div>
+            <!-- Navbar -->
+           <div class="mt-3">
+                <ul class="space-y-4">
+                    <li>
+                        <div class="flex items-center space-x-3">
+                            <!-- Example SVG!! -->
+                            <svg width="25px" height="25px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="fill-white">
+
+                                <path d="M0 0h48v48H0z" fill="none"/>
+                                <g id="Shopicon">
+                                    <path d="M31.278,25.525C34.144,23.332,36,19.887,36,16c0-6.627-5.373-12-12-12c-6.627,0-12,5.373-12,12
+                                        c0,3.887,1.856,7.332,4.722,9.525C9.84,28.531,5,35.665,5,44h38C43,35.665,38.16,28.531,31.278,25.525z M16,16c0-4.411,3.589-8,8-8
+                                        s8,3.589,8,8c0,4.411-3.589,8-8,8S16,20.411,16,16z M24,28c6.977,0,12.856,5.107,14.525,12H9.475C11.144,33.107,17.023,28,24,28z"
+                                        />
+                                </g>
+                                </svg>
+                            <h1>Generi</h1>
+
+                            <!-- arrow button -->
+                            <button onclick="handleButtonGenre()">
+                                <svg class="svg-genre" width="15px" height="15px" viewBox="0 -4.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" transform="rotate(180)">
+
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    
+                                    <g id="SVGRepo_iconCarrier"> <title>arrow_up [#337]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-260.000000, -6684.000000)" fill="#ededed"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M223.707692,6534.63378 L223.707692,6534.63378 C224.097436,6534.22888 224.097436,6533.57338 223.707692,6533.16951 L215.444127,6524.60657 C214.66364,6523.79781 213.397472,6523.79781 212.616986,6524.60657 L204.29246,6533.23165 C203.906714,6533.6324 203.901717,6534.27962 204.282467,6534.68555 C204.671211,6535.10081 205.31179,6535.10495 205.70653,6534.69695 L213.323521,6526.80297 C213.714264,6526.39807 214.346848,6526.39807 214.737591,6526.80297 L222.294621,6534.63378 C222.684365,6535.03868 223.317949,6535.03868 223.707692,6534.63378" id="arrow_up-[#337]"> </path> </g> </g> </g> </g>
+                                    
+                                    </svg>
+                            </button>
+                        </div>
+                        <div class="grid-cols-2 w-full mt-1 rounded-md bg-secondary dark:bg-darksecondarycondary text-black text-sm p-3 items-center justify-items-center gap-1 genre-visible hidden">
+                            <h3>Arti Marziali</h3>
+                            <h3>Avanguardia</h3>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center space-x-3">
+                            <!-- Example SVG!! -->
+                            <svg width="25px" height="25px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="fill-white">
+
+                                <path d="M0 0h48v48H0z" fill="none"/>
+                                <g id="Shopicon">
+                                    <path d="M31.278,25.525C34.144,23.332,36,19.887,36,16c0-6.627-5.373-12-12-12c-6.627,0-12,5.373-12,12
+                                        c0,3.887,1.856,7.332,4.722,9.525C9.84,28.531,5,35.665,5,44h38C43,35.665,38.16,28.531,31.278,25.525z M16,16c0-4.411,3.589-8,8-8
+                                        s8,3.589,8,8c0,4.411-3.589,8-8,8S16,20.411,16,16z M24,28c6.977,0,12.856,5.107,14.525,12H9.475C11.144,33.107,17.023,28,24,28z"
+                                        />
+                                </g>
+                                </svg>
+                            <h1>Nuove aggiunte</h1>
+                        </div>
+                    </li>
+                </ul>
+           </div>
+        </div>
+    </nav>
+    <!-- Alert! -->
+    <div class="max-w-5xl bg-[#DC3545] dark:bg-green-700 p-2 mx-auto justify-between text-center mt-2 rounded-sm text-white flex space-x-2" id="alert">
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid maxime reiciendis saepe molestias accusamus maiores.</h3>
+        <button onclick="handleButtonClose()">
+            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                <g id="SVGRepo_iconCarrier"> <g id="Menu / Close_SM"> <path id="Vector" d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke="#f5f5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g> </g>
+            </svg>
+        </button>
+    </div>
+    <main>
+        <div class="max-w-5xl md:flex md:space-x-2 space-y-2 w-full mx-auto mt-2 p-2 md:p-0">
+            <!-- MAINCONTENT -->
+            <div class="md:w-[70%] space-y-2">
+                <!-- title -->
+                <div class="w-full rounded-md bg-secondary dark:bg-darksecondary dark:text-gray-300 p-2">
+                    <h1>Fumetsu no anata</h1>
+                </div>
+                <!-- main -->
+                <section class="space-y-2">
+                    <!-- Video Player -->
+                    <div class="w-full sm:min-h-[66vh] min-h-[35vh] bg-red-500 rounded-sm">
+                        
+                    </div>
+                    <!-- Controller -->
+                    <div class="bg-secondary dark:bg-darksecondary p-2 space-y-2 dark:bg-darksecondarycondary">
+                        <div class=" text-gray-600 text-xs md:text-sm md:flex md:items-center md:justify-between grid grid-cols-3 gap-2 items-center dark:text-gray-400">
+                            <div class="hover:text-primary cursor-pointer">
+                                <h4>@Player alternativo</h4>
+                            </div>
+                            <div class="hover:text-primary cursor-pointer">
+                                <h4>?Precedente</h4>
+                            </div>
+                            <div class="hover:text-primary cursor-pointer">
+                                <h4>>Successivo</h4>
+                            </div>
+                            <div class="hover:text-primary cursor-pointer">
+                                <h4>=Watchlist</h4>
+                            </div>
+                            <div class="hover:text-primary cursor-pointer">
+                                <h4>VCondividi</h4>
+                            </div>
+                            <div class="hover:text-primary cursor-pointer">
+                                <h4>Espandi</h4>
+                            </div>
+                            <div class="hover:text-primary cursor-pointer">
+                                <h4>Spegni le luci</h4>
+                            </div>
+                        </div>
+                        <div class="md:flex grid grid-cols-2 justify-items-start space-x-4 text-gray-600 text-sm dark:text-gray-400">
+                            <div class="flex space-x-1 hover:bg-gray-200 px-2 py-1 items-center cursor-pointer">
+                                <h2>Segnala</h2>
+                            </div>
+                            <div class="flex space-x-1 hover:bg-gray-200 px-2 py-1 items-center cursor-pointer">
+                                <svg width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="512" cy="512" r="512" style="fill:#2e51a2"/>
+                                    <path d="M432.49 410.61V590.3l-44.86-.06V479l-43.31 51.29-42.43-52.44-.43 112.75H256V410.65h47l39.79 54.29 43-54.31zm184.06 44.14.53 135.15h-50.45l-.17-61.25h-59.73c1.49 10.65 4.48 27 8.9 38 3.31 8.13 6.36 16 12.44 24.06l-36.37 24c-7.45-13.57-13.27-28.52-18.73-44.42a198.31 198.31 0 0 1-10.82-46.49c-1.81-16-2.07-31.38 2.28-47.19a83.37 83.37 0 0 1 24.77-39.81c6.68-6.25 16-10.67 23.47-14.66s15.85-5.63 23.62-7.66a158 158 0 0 1 25.41-3.9c8.49-.73 23.62-1.41 51-.6l11.63 37.31h-58.78c-12.65.17-18.73 0-28.61 4.46a47.7 47.7 0 0 0-27.26 41l56.81.7.81-38.61h49.26zM701.72 410v141.35L768 552l-9.17 37.87H656.28V409.33z" style="fill:#fff"/>
+                                 </svg>
+                                <h2>AnimeList</h2>
+                            </div>
+                            <div class="flex space-x-1 hover:bg-gray-200 px-2 py-1 items-center cursor-pointer">
+                                <svg fill="#000000" width="20px" height="20px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M6.361 2.943 0 21.056h4.942l1.077-3.133H11.4l1.052 3.133H22.9c.71 0 1.1-.392 1.1-1.101V17.53c0-.71-.39-1.101-1.1-1.101h-6.483V4.045c0-.71-.392-1.102-1.101-1.102h-2.422c-.71 0-1.101.392-1.101 1.102v1.064l-.758-2.166zm2.324 5.948 1.688 5.018H7.144z"/></svg>
+                                <h2>AniList</h2>
+                            </div>
+                            <div class="flex space-x-1 hover:bg-gray-200 px-2 py-1 items-center cursor-pointer">
+                                <svg width="20px" height="20px" viewBox="0 -3 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    
+                                    <g id="SVGRepo_iconCarrier"> <title>youtube [#168]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7442.000000)" fill="#ff0000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M251.988432,7291.58588 L251.988432,7285.97425 C253.980638,7286.91168 255.523602,7287.8172 257.348463,7288.79353 C255.843351,7289.62824 253.980638,7290.56468 251.988432,7291.58588 M263.090998,7283.18289 C262.747343,7282.73013 262.161634,7282.37809 261.538073,7282.26141 C259.705243,7281.91336 248.270974,7281.91237 246.439141,7282.26141 C245.939097,7282.35515 245.493839,7282.58153 245.111335,7282.93357 C243.49964,7284.42947 244.004664,7292.45151 244.393145,7293.75096 C244.556505,7294.31342 244.767679,7294.71931 245.033639,7294.98558 C245.376298,7295.33761 245.845463,7295.57995 246.384355,7295.68865 C247.893451,7296.0008 255.668037,7296.17532 261.506198,7295.73552 C262.044094,7295.64178 262.520231,7295.39147 262.895762,7295.02447 C264.385932,7293.53455 264.28433,7285.06174 263.090998,7283.18289" id="youtube-[#168]"> </path> </g> </g> </g> </g>
+                                    
+                                    </svg>
+                                <h2>Trailer</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Countdown -->
+                    <div class="px-2 py-1 bg-primary flex items-center space-x-3 text-white">
+                        <svg width="30px" height="30px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#e8e8e8" fill="none">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            <g id="SVGRepo_iconCarrier">
+                            <path d="M47.22,32.79c5.71-6.65,10.12-15.39,9.44-26.21,0,0-26.18-3.94-41.87,31.65L25.43,48.87A64.38,64.38,0,0,0,35.64,43"/>
+                            <path d="M45.53,7.45A12.49,12.49,0,0,0,56,17.71"/>
+                            <circle cx="40.3" cy="22.92" r="6.2"/>
+                            <path d="M15.73,36.18l-5.3.68a.27.27,0,0,1-.28-.37l3.92-9A2.68,2.68,0,0,1,16,26l6.59-1.38"/>
+                            <path d="M27.38,47.76l-.68,5.3a.27.27,0,0,0,.37.28l9-3.92"/>
+                            <path d="M23.05,46.49C20.68,53.91,9,54.28,9,54.28S8.83,42.88,16.6,40"/>
+                            <circle cx="45.53" cy="43.04" r="10.25"/>
+                            <polyline points="45.53 35.84 45.53 43.36 49.11 46.11"/>
+                            </g>
+                        </svg>
+                        <p class="dark:text-gray-300">Il prossimo episodio uscirà all'incirca fra ..</p>
+                    </div>
+                    <!-- Server -->
+                    <div class="bg-secondary dark:bg-darksecondary">
+                        <div class="text-lg font-medium p-2 text-primary border-b-[2px] dark:border-gray-800 border-gray-300 flex items-center space-x-3 dark:text-gray-300">
+                            <h3>Server</h3>
+                            <div class="flex items-center space-x-2">
+                                <div class="hover:text-primary text-gray-500 text-sm border-b-2 dark:text-gray-400 border-primaytext-primary mt-1 font-normal">
+                                    <h4>AnimeWorld Server</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center text-gray-600 dark:text-gray-400 px-5 space-x-3 p-2">
+                                <h4 class=" hover:border-b-[2px] hover:border-gray-400">StreamsSB</h4>
+                                <h4 class=" hover:border-b-[2px] hover:border-gray-400">Streamlare</h4>
+                            </div>
+                            <div class="flex space-x-3 py-4 px-5">
+                                <div class="bg-primary px-4 text-white flex items-center cursor-pointer">
+                                    <p>1</p>
+                                </div>
+                                <div class="bg-gray-300 px-4 text-primary flex items-center cursor-pointer">
+                                    <p>2</p>
+                                </div>
+                                <div class="bg-gray-300 px-4 text-primary flex items-center cursor-pointer">
+                                    <p>3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Download -->
+                    <div class="bg-secondary dark:bg-darksecondary px-2 md:p-0">
+                        <div class="text-lg font-medium p-2 text-primary border-b-[2px] dark:border-gray-800 border-gray-300 flex items-center space-x-3 dark:text-gray-300">
+                            <h3>Download</h3>
+                           
+                        </div>
+                        <div class="sm:grid sm:grid-cols-2 items-center justify-items-center mt-5 space-y-3">
+                           <div class="bg-primary text-white py-1 rounded-sm px-3 flex items-center space-x-2">
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g id="SVGRepo_iconCarrier">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.163 2.819C9 3.139 9 3.559 9 4.4V11H7.803c-.883 0-1.325 0-1.534.176a.75.75 0 0 0-.266.62c.017.274.322.593.931 1.232l4.198 4.401c.302.318.453.476.63.535a.749.749 0 0 0 .476 0c.177-.059.328-.217.63-.535l4.198-4.4c.61-.64.914-.96.93-1.233a.75.75 0 0 0-.265-.62C17.522 11 17.081 11 16.197 11H15V4.4c0-.84 0-1.26-.164-1.581a1.5 1.5 0 0 0-.655-.656C13.861 2 13.441 2 12.6 2h-1.2c-.84 0-1.26 0-1.581.163a1.5 1.5 0 0 0-.656.656zM5 21a1 1 0 0 0 1 1h12a1 1 0 1 0 0-2H6a1 1 0 0 0-1 1z" fill="#f2f2f2"/>
+                                    </g>
+                                </svg>
+                                <p>Download Dirreto Eps-7</p>
+                           </div>
+                           <div class="bg-primary  text-white py-1 rounded-sm px-3 flex items-center space-x-2">
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g id="SVGRepo_iconCarrier">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.163 2.819C9 3.139 9 3.559 9 4.4V11H7.803c-.883 0-1.325 0-1.534.176a.75.75 0 0 0-.266.62c.017.274.322.593.931 1.232l4.198 4.401c.302.318.453.476.63.535a.749.749 0 0 0 .476 0c.177-.059.328-.217.63-.535l4.198-4.4c.61-.64.914-.96.93-1.233a.75.75 0 0 0-.265-.62C17.522 11 17.081 11 16.197 11H15V4.4c0-.84 0-1.26-.164-1.581a1.5 1.5 0 0 0-.655-.656C13.861 2 13.441 2 12.6 2h-1.2c-.84 0-1.26 0-1.581.163a1.5 1.5 0 0 0-.656.656zM5 21a1 1 0 0 0 1 1h12a1 1 0 1 0 0-2H6a1 1 0 0 0-1 1z" fill="#f2f2f2"/>
+                                    </g>
+                                </svg>
+                                <p>Download DoodStream Eps-7</p>
+                           </div>
+                        </div>
+                        <p class="text-primary text-center font-medium text-sm p-3">Se in alcune serie il tasto Download Diretto porta in una pagina 404, utilizzate il tasto Download Alternativo.</p>
+                    </div>
+                    <!-- Detail -->
+                    <div class="bg-secondary dark:bg-darksecondary p-3">
+                        <div class="md:flex md:space-x-10">
+                            <div class="w-36 hidden md:block">
+                                <img src="assets/img/128318l.webp" alt="">
+                            </div>
+                            <!-- Title/Vote -->
+                            <div class="space-y-7 w-full px-3">
+                                <div class=" text-primary font-medium text-lg flex justify-between dark:text-gray-300">
+                                    <h3>Vinland Saga</h3>
+                                    <!-- Vote -->
+                                    <div class="flex items-center space-x-1 mt-3">
+                                        <span class="text-gray-600 dark:text-gray-400 text-sm font-medium">Vote:</span>
+                                        <div class="inline-flex space-x-1">
+                                          <svg class="h-5 w-5 fill-current text-gray-400 hover:text-green-500 star" viewBox="0 0 20 20">
+                                            <path d="M10 15.142l-5.948 3.568 1.143-6.678L.287 7.29l6.675-.97L10 .858l3.038 6.463 6.675.97-4.908 4.742 1.142 6.678z" />
+                                          </svg>
+                                          <svg class="h-5 w-5 fill-current text-gray-400 hover:text-green-500 star" viewBox="0 0 20 20">
+                                            <path d="M10 15.142l-5.948 3.568 1.143-6.678L.287 7.29l6.675-.97L10 .858l3.038 6.463 6.675.97-4.908 4.742 1.142 6.678z" />
+                                          </svg>
+                                          <svg class="h-5 w-5 fill-current text-gray-400 hover:text-green-500 star" viewBox="0 0 20 20">
+                                            <path d="M10 15.142l-5.948 3.568 1.143-6.678L.287 7.29l6.675-.97L10 .858l3.038 6.463 6.675.97-4.908 4.742 1.142 6.678z" />
+                                          </svg>
+                                          <svg class="h-5 w-5 fill-current text-gray-400 hover:text-green-500 star" viewBox="0 0 20 20">
+                                            <path d="M10 15.142l-5.948 3.568 1.143-6.678L.287 7.29l6.675-.97L10 .858l3.038 6.463 6.675.97-4.908 4.742 1.142 6.678z" />
+                                          </svg>
+                                          <svg class="h-5 w-5 fill-current text-gray-400 hover:text-green-500 star" viewBox="0 0 20 20">
+                                            <path d="M10 15.142l-5.948 3.568 1.143-6.678L.287 7.29l6.675-.97L10 .858l3.038 6.463 6.675.97-4.908 4.742 1.142 6.678z" />
+                                          </svg>
+                                        </div>
+                                      </div>
+                                </div>
+                                <!-- MainInfo -->
+                                <div class="grid grid-cols-2 justify-items-start text-sm text-gray-600 dark:text-gray-300 border-b-2 border-gray-400 pb-5">
+                                    <div class="flex space-x-2">
+                                        <h1>Categoria:</h1>
+                                        <p class="cursor-pointer hover:text-primary">Anime</p>
+                                    </div>
+                                    <div class="flex space-x-2">
+                                        <h1>Voto:</h1>
+                                        <p class="cursor-pointer hover:text-primary">7.13/10</p>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-600 text-start dark:text-gray-400">
+                                    <p>Un essere immortale viene inviato sulla Terra e incontra un ragazzo che vive da solo nel mezzo della tundra. L'essere può prendere le sembianze di qualsiasi cosa sia morente ma solo se "l'impeto" è più forte del precedente. Che tipo di esperienze e incontri affronterà un essere immortale?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- SIDEBAR -->
+            <div class="md:w-[30%] h-20 space-y-2">
+                <div class="p-2 bg-secondary dark:bg-darksecondary rounded-sm">
+                    <div class="pb-2 text-primary border-b-[2px] dark:border-gray-800 dark:text-gray-300 border-gray-300">
+                        <h3>RELATED</h3>
+                    </div>
+                    <div class="mt-3 space-y-3">
+                        <div class="flex space-x-2 items-center border-b-[2px] border-gray-300 py-3 dark:border-gray-800">
+                            <img class="w-12" src="assets/img/131828l.webp" alt="">
+                            <div>
+                                <h1 class="text-sm text-black dark:text-gray-300">World Witches Hasshin Shimasu!</h1>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">Anime/2021/22/ 25min/eps</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const stars = document.querySelectorAll('.star');
+        
+        stars.forEach((star, index) => {
+          star.addEventListener('click', () => {
+            stars.forEach(s => s.classList.remove('text-green-500'));
+            for (let i = 0; i <= index; i++) {
+              stars[i].classList.add('text-green-500');
+            }
+          });
+        });
+        </script>
+</body>
+</html>
