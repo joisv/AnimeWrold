@@ -5,10 +5,21 @@ const genreSvg = document.querySelector('.svg-genre')
 const mobileNav = document.querySelector('.mobile-nav')
 
 const checkbox = document.getElementById('toggle');
+const body = document.documentElement;
+const dot = document.querySelector('.dot');
+let dark = localStorage.getItem('dark') === 'true';
+
+if (dark) {
+  body.classList.add('dark');
+  dot.classList.add('translate-x-full');
+} else {
+  body.classList.remove('dark');
+  dot.classList.remove('translate-x-full');
+}
 checkbox.addEventListener('change', function() {
-    const body = document.documentElement;
+  dark = !dark;
+  localStorage.setItem('dark', dark);
   body.classList.toggle('dark');
-  const dot = document.querySelector('.dot');
   dot.classList.toggle('translate-x-full');
 });
 

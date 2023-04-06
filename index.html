@@ -182,10 +182,23 @@
                 <div class="bg-lime-500 h-[40vh]">
                     <div class="swiper w-full h-full">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="w-full h-full bg-top bg-no-repeat sliders" style="background-image: url('assets/img/144.png');"></div>
+                          <div class="swiper-slide  relative">
+                            <div class="w-full h-full bg-top bg-no-repeat sliders" style="background-image: url('assets/img/144.png');">
+                                <div class="p-2 absolute bottom-0 text-lg font-medium text-white max-w-[80%]">
+                                    <h1>Spy X Family</h1>
+                                    <p class="text-sm font-normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus quod debitis necessitatibus corporis doloribus illo mollitia ipsam saepe tempora dolorum quasi, officiis vero soluta fuga.</p>
+                                </div>
+                            </div>
                           </div>
-                          <div class="swiper-slide">Slide 2</div>
+                          <div class="swiper-slide  relative">
+                            <div class="w-full h-full bg-top bg-no-repeat sliders" style="background-image: url('assets/img/146.png');">
+                                <div class="p-2 absolute bottom-0 text-lg font-medium text-white max-w-[80%]">
+                                    <h1>Naruto Shippuden</h1>
+                                    <p class="text-sm font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, aliquid. Cupiditate, illo voluptatum. Rerum iusto magnam provident modi, assumenda mollitia atque fugiat repudiandae amet quam est explicabo.</p>
+                                </div>
+                            </div>
+                          </div>
+                          
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -265,8 +278,7 @@
                             </div>
                         
                         </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
+                       
                     </div>
                 </div>
             </div>
@@ -376,10 +388,7 @@
         el: '.swiper-pagination',
         clickable: true,
       },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+      
     });
     </script>
 </body>
