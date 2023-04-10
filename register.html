@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script defer src="src/script.js"></script> -->
     <link rel="stylesheet" href="dist/output.css">
-    <title>Register</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <title>Login</title>
 </head>
-<body>
+<body class="bg-[#E2E2E2] dark:bg-bgdark ">
     <header>
         <div class="h-16 flex justify-center bg-secondary dark:bg-darksecondary px-3 md:px-0">
             <div class="max-w-5xl w-full flex items-center justify-between">
@@ -22,7 +27,7 @@
                         <form class="flex items-center">   
                             <div class="relative w-full">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                    <svg aria-hidden="true" width="23px" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
                                 </div>
                                 <input type="text" id="simple-search" class="bg-gray-50 dark:bg-bgdark border border-gray-300 text-gray-900 dark:border-gray-500 dark:text-gray-300 text-xs rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-[130%] pl-10 p-2.5 focus:outline-none" placeholder="Search" required>
                             </div>
@@ -41,7 +46,7 @@
                           </div>
                         </label>
                       </div>
-                    <div class="cursor-pointer">
+                    <div class="cursor-pointer hidden sm:block">
                         <svg class="dark:fill-gray-300" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px" viewBox="0 0 24 24" width="30px" fill="#000000"><g><rect fill="none" height="30" width="30"/></g><g><g><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5zm10.79-1.38C16.45 15.8 14.32 15 12 15s-4.45.8-6.14 2.12C4.7 15.73 4 13.95 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12z"/><path d="M12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/></g></g></svg>
                     </div>
                     <!-- Hamburger Menu -->
@@ -131,7 +136,7 @@
                                     </svg>
                             </button>
                         </div>
-                        <div class="grid-cols-2 w-full mt-1 rounded-md bg-secondary dark:text-white dark:bg-darksecondary text-black text-sm p-3 items-center justify-items-center gap-1 genre-visible hidden">
+                        <div class="grid-cols-2 w-full mt-1 rounded-md bg-secondary dark:text-gray-300 dark:bg-darksecondary text-black text-sm p-3 items-center justify-items-center gap-1 genre-visible hidden">
                             <h3>Arti Marziali</h3>
                             <h3>Avanguardia</h3>
                             
@@ -157,5 +162,115 @@
            </div>
         </div>
     </nav>
+    <div class=" bg-[#DC3545] dark:bg-green-700 p-2 mx-auto justify-between text-center -translate-y-[500%] ease-in-out duration-300 mt-2 rounded-sm w-fit text-white flex space-x-2" id="alert">
+        <h3>Someting went wrong</h3>
+        <button onclick="handleButtonClose()">
+            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                <g id="SVGRepo_iconCarrier"> <g id="Menu / Close_SM"> <path id="Vector" d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke="#f5f5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g> </g>
+            </svg>
+        </button>
+    </div>
+    <main class="px-7 md:px-0">
+        <div class="max-w-screen-lg  mx-auto mt-2 md:flex md:space-x-3 space-y-3">
+           <div class="md:w-[60%] mx-auto bg-secondary p-4 dark:bg-darksecondary ">
+            <form>
+                <div class="mb-6">
+                <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
+                <input id="username" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="jhon doe" required>
+                </div>
+                <div class="mb-6">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="jhondoe@mailhot.com" required>
+                </div>
+                <div class="mb-6">
+                <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+                <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+                </div>
+                <div class="mb-6">
+                <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Repeat password</label>
+                <input type="password" id="repeat-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+                </div>
+                <div class="flex items-start mb-6">
+                <div class="flex items-center h-5">
+                    <input id="terms" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
+                </div>
+                <label for="terms" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
+                </div>
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" id="submit">Register new account</button>
+            </form>
+           </div>
+           <div class="md:w-[40%] bg-secondary p-4 dark:bg-darksecondary ">
+            <div>
+                <h1 class="text-primary text-xl mb-2 dark:text-gray-300">VANTAGGI DELLA REGISTRAZIONE</h1>
+            </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide relative">
+                            <h1 class="text-primary dark:text-gray-300 font-semibold text-3xl p-2">Lorem ipsum</h1>
+                            <img class="rounded-xl h-56 w-full object-cover object-top" src="assets/img/129579l.webp" alt="" srcset="">
+                            <div class="flex flex-col items-center justify-center">
+                                <h2 class="font-semibold text-primary dark:text-gray-300 text-xl">Lorem</h2>
+                                <p class="text-sm text-center text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde eos eveniet facilis sapiente deserunt, explicabo cum sunt necessitatibus magni odit officia, autem quo distinctio veniam. Delectus cum debitis illo!</p>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <h1 class="text-primary dark:text-gray-300 font-semibold text-3xl p-2">Lorem ipsum</h1>
+                            <img class="rounded-xl h-56 w-full object-cover object-top" src="assets/img/tokyo.webp" alt="" srcset="">
+                            <div class="">
+                                <h2 class="font-semibold text-primary dark:text-gray-300 text-xl">Lorem</h2>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde eos eveniet facilis sapiente deserunt, explicabo cum sunt necessitatibus magni odit officia, autem quo distinctio veniam. Delectus cum debitis illo!</p>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <h1 class="text-primary dark:text-gray-300 font-semibold text-3xl p-2 text-end">Lorem ipsum</h1>
+                            <img class="rounded-xl h-56 w-full object-cover object-top" src="assets/img/131828l.webp" alt="" srcset="">
+                            <div class="flex flex-col items-center justify-center">
+                                <h2 class="font-semibold text-primary dark:text-gray-300 text-xl">Lorem</h2>
+                                <p class="text-sm text-center text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde eos eveniet facilis sapiente deserunt, explicabo cum sunt necessitatibus magni odit officia, autem quo distinctio veniam. Delectus cum debitis illo!</p>
+
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+           </div>
+        </div>
+    </main>
+    <script type="module">
+        const submit = document.getElementById('submit')
+        submit.addEventListener('click' , (event) => {
+            event.preventDefault(); // mencegah form melakukan submit
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            
+            if (username && email && password) {
+                window.location.href = 'dashboard.html'; // redirect ke halaman dashboard
+            } else {
+                var alert = document.getElementById('alert');
+                alert.classList.toggle('-translate-y-[500]'); // tampilkan pesan kesalahan
+            }
+        })
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+        
+        var swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        });
+    </script>
 </body>
 </html>
