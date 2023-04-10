@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="src/script.js"></script>
     <link rel="stylesheet" href="dist/output.css">
     <title>Login</title>
 </head>
-<body>
+<body class="bg-[#E2E2E2] dark:bg-bgdark ">
     <header>
         <div class="h-16 flex justify-center bg-secondary dark:bg-darksecondary px-3 md:px-0">
             <div class="max-w-5xl w-full flex items-center justify-between">
@@ -131,7 +132,7 @@
                                     </svg>
                             </button>
                         </div>
-                        <div class="grid-cols-2 w-full mt-1 rounded-md bg-secondary dark:text-white dark:bg-darksecondary text-black text-sm p-3 items-center justify-items-center gap-1 genre-visible hidden">
+                        <div class="grid-cols-2 w-full mt-1 rounded-md bg-secondary dark:text-gray-300 dark:bg-darksecondary text-black text-sm p-3 items-center justify-items-center gap-1 genre-visible hidden">
                             <h3>Arti Marziali</h3>
                             <h3>Avanguardia</h3>
                             
@@ -157,5 +158,106 @@
            </div>
         </div>
     </nav>
+    <div class=" bg-[#DC3545] dark:bg-green-700 p-2 mx-auto justify-between text-center -translate-y-[300%] ease-in-out duration-300 mt-2 rounded-sm w-fit text-white flex space-x-2" id="alert">
+        <h3>Someting went wrong</h3>
+        <button onclick="handleButtonClose()">
+            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                <g id="SVGRepo_iconCarrier"> <g id="Menu / Close_SM"> <path id="Vector" d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke="#f5f5f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g> </g>
+            </svg>
+        </button>
+    </div>
+    <main>
+        <div class="max-w-xl bg-secondary p-4 mx-auto mt-3 dark:bg-darksecondary">
+            <div class="w-full flex flex-col items-center justify-center p-5 space-y-2">
+                <h1 class="text-2xl dark:text-gray-300 text-primary">ACCEDI AL TUO ACCOUNT!</h1>
+                <p class="text-sm dark:text-gray-300">Compila i dati richiesti qui sotto per poter accedere al tuo account.</p>
+            </div>
+            <div class="space-y-4">
+                <form>
+                    <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-300 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="jhondoe@mailhot.com" required>
+                    </div>
+                    <div class="mb-6">
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label>
+                    <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-300 dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                    </div>
+                    <div class="flex items-start mb-6">
+                    <div class="flex items-center h-5">
+                        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800">
+                    </div>
+                    <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                    </div>
+                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-lg w-full px-5 py-2.5 text-center dark:bg-primary dark:hover:bg-blue-700 dark:focus:ring-blue-800" id="submit">Login</button>
+                </form>
+                <div class="flex space-x-2">
+                    <button onclick="openLink('https://account.google.com/')" class="flex items-center justify-center py-[2-px] bg-red-500 w-full rounded-md">
+                        <svg width="22px" height="22px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <g id="SVGRepo_iconCarrier"> <title>google [#178]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7399.000000)" fill="#f5f5f5"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M263.821537,7247.00386 L254.211298,7247.00386 C254.211298,7248.0033 254.211298,7250.00218 254.205172,7251.00161 L259.774046,7251.00161 C259.560644,7252.00105 258.804036,7253.40026 257.734984,7254.10487 C257.733963,7254.10387 257.732942,7254.11086 257.7309,7254.10986 C256.309581,7255.04834 254.43389,7255.26122 253.041161,7254.98137 C250.85813,7254.54762 249.130492,7252.96451 248.429023,7250.95364 C248.433107,7250.95064 248.43617,7250.92266 248.439233,7250.92066 C248.000176,7249.67336 248.000176,7248.0033 248.439233,7247.00386 L248.438212,7247.00386 C249.003881,7245.1669 250.783592,7243.49084 252.969687,7243.0321 C254.727956,7242.65931 256.71188,7243.06308 258.170978,7244.42831 C258.36498,7244.23842 260.856372,7241.80579 261.043226,7241.6079 C256.0584,7237.09344 248.076756,7238.68155 245.090149,7244.51127 L245.089128,7244.51127 C245.089128,7244.51127 245.090149,7244.51127 245.084023,7244.52226 L245.084023,7244.52226 C243.606545,7247.38565 243.667809,7250.75975 245.094233,7253.48622 C245.090149,7253.48921 245.087086,7253.49121 245.084023,7253.49421 C246.376687,7256.0028 248.729215,7257.92672 251.563684,7258.6593 C254.574796,7259.44886 258.406843,7258.90916 260.973794,7256.58747 C260.974815,7256.58847 260.975836,7256.58947 260.976857,7256.59047 C263.15172,7254.63157 264.505648,7251.29445 263.821537,7247.00386" id="google-[#178]"> </path> </g> </g> </g> </g>
+                            
+                            </svg>
+                    </button>
+                    <button onclick="openLink('https://twitch.tv/')" class="flex items-center justify-center py-1 bg-purple-600 w-full rounded-md">
+                        <svg width="25px" height="25px" viewBox="-0.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            <g id="SVGRepo_iconCarrier"> <title>twitch [#182]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-141.000000, -7399.000000)" fill="#f0f0f0"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M97,7249 L99,7249 L99,7244 L97,7244 L97,7249 Z M92,7249 L94,7249 L94,7244 L92,7244 L92,7249 Z M102,7250.307 L102,7241 L88,7241 L88,7253 L92,7253 L92,7255.953 L94.56,7253 L99.34,7253 L102,7250.307 Z M98.907,7256 L94.993,7256 L92.387,7259 L90,7259 L90,7256 L85,7256 L85,7242.48 L86.3,7239 L104,7239 L104,7251.173 L98.907,7256 Z" id="twitch-[#182]"> </path> </g> </g> </g> </g>
+                            
+                            </svg>
+                    </button>
+                    <button onclick="openLink('https://discord.com/')" class="flex items-center justify-center py-1 bg-violet-500 w-full rounded-md">
+                        <svg width="25px" height="25px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#f7f7f7" class="bi bi-discord" stroke="#f7f7f7">
+
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <g id="SVGRepo_iconCarrier"> <path d="M6.552 6.712c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888.008-.488-.36-.888-.816-.888zm2.92 0c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888s-.36-.888-.816-.888z"/> <path d="M13.36 0H2.64C1.736 0 1 .736 1 1.648v10.816c0 .912.736 1.648 1.64 1.648h9.072l-.424-1.48 1.024.952.968.896L15 16V1.648C15 .736 14.264 0 13.36 0zm-3.088 10.448s-.288-.344-.528-.648c1.048-.296 1.448-.952 1.448-.952-.328.216-.64.368-.92.472-.4.168-.784.28-1.16.344a5.604 5.604 0 0 1-2.072-.008 6.716 6.716 0 0 1-1.176-.344 4.688 4.688 0 0 1-.584-.272c-.024-.016-.048-.024-.072-.04-.016-.008-.024-.016-.032-.024-.144-.08-.224-.136-.224-.136s.384.64 1.4.944c-.24.304-.536.664-.536.664-1.768-.056-2.44-1.216-2.44-1.216 0-2.576 1.152-4.664 1.152-4.664 1.152-.864 2.248-.84 2.248-.84l.08.096c-1.44.416-2.104 1.048-2.104 1.048s.176-.096.472-.232c.856-.376 1.536-.48 1.816-.504.048-.008.088-.016.136-.016a6.521 6.521 0 0 1 4.024.752s-.632-.6-1.992-1.016l.112-.128s1.096-.024 2.248.84c0 0 1.152 2.088 1.152 4.664 0 0-.68 1.16-2.448 1.216z"/> </g>
+                            
+                            </svg>
+                    </button>
+                    <button onclick="openLink('https://store.steampowered.com/')" class="flex items-center justify-center py-[6px] bg-black w-full rounded-md">
+                        <svg fill="#f7f7f7" width="27px" height="27px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#f7f7f7" stroke-width="0.00032">
+
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <g id="SVGRepo_iconCarrier"> <title>steam</title> <path d="M18.102 12.129c0-0 0-0 0-0.001 0-1.564 1.268-2.831 2.831-2.831s2.831 1.268 2.831 2.831c0 1.564-1.267 2.831-2.831 2.831-0 0-0 0-0.001 0h0c-0 0-0 0-0.001 0-1.563 0-2.83-1.267-2.83-2.83 0-0 0-0 0-0.001v0zM24.691 12.135c0-2.081-1.687-3.768-3.768-3.768s-3.768 1.687-3.768 3.768c0 2.081 1.687 3.768 3.768 3.768v0c2.080-0.003 3.765-1.688 3.768-3.767v-0zM10.427 23.76l-1.841-0.762c0.524 1.078 1.611 1.808 2.868 1.808 1.317 0 2.448-0.801 2.93-1.943l0.008-0.021c0.155-0.362 0.246-0.784 0.246-1.226 0-1.757-1.424-3.181-3.181-3.181-0.405 0-0.792 0.076-1.148 0.213l0.022-0.007 1.903 0.787c0.852 0.364 1.439 1.196 1.439 2.164 0 1.296-1.051 2.347-2.347 2.347-0.324 0-0.632-0.066-0.913-0.184l0.015 0.006zM15.974 1.004c-7.857 0.001-14.301 6.046-14.938 13.738l-0.004 0.054 8.038 3.322c0.668-0.462 1.495-0.737 2.387-0.737 0.001 0 0.002 0 0.002 0h-0c0.079 0 0.156 0.005 0.235 0.008l3.575-5.176v-0.074c0.003-3.12 2.533-5.648 5.653-5.648 3.122 0 5.653 2.531 5.653 5.653s-2.531 5.653-5.653 5.653h-0.131l-5.094 3.638c0 0.065 0.005 0.131 0.005 0.199 0 0.001 0 0.002 0 0.003 0 2.342-1.899 4.241-4.241 4.241-2.047 0-3.756-1.451-4.153-3.38l-0.005-0.027-5.755-2.383c1.841 6.345 7.601 10.905 14.425 10.905 8.281 0 14.994-6.713 14.994-14.994s-6.713-14.994-14.994-14.994c-0 0-0.001 0-0.001 0h0z"/> </g>
+                            
+                            </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const submit = document.getElementById('submit')
+        
+        submit.addEventListener('click' , (event) => {
+            event.preventDefault()
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var warning = document.getElementById('alert') 
+
+            if (email === 'jhondoe@mailhot.com' && password === 'password') {
+                window.location.href = 'dashboard.html';
+            } else {
+                warning.classList.toggle('-translate-y-[300%]')
+            }
+        })
+
+        function openLink(url) {
+            var newWindow = window.open(url, '_blank');
+            newWindow.opener = null;
+        }
+    </script>
 </body>
 </html>
