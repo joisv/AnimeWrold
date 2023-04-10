@@ -211,8 +211,8 @@
                     <div class="md:flex block md:space-x-2 items-center">
                         <h1 class="text-primary dark:text-gray-300 font-medium">ULTIMI EPISODI</h1>
                         <div class="flex space-x-3 sm:text-sm mt-1 text-gray-600 dark:text-gray-400">
-                            <button class="border-b-2 border-primary"  onclick="openTab(event, 'tab1')" id="defaultOpen">Tutti</button>
-                            <button  onclick="openTab(event, 'tab2')">Sub-ITA</button>
+                            <button class="focus:border-b-2 foucs:border-primary"  onclick="openTab(event, 'tab1')" id="defaultOpen">Tutti</button>
+                            <button  class="focus:border-b-2 foucs:border-primary" onclick="openTab(event, 'tab2')">Sub-ITA</button>
                               
                             <!-- <button>Dub-ITA</button>
                             <button>Tendenze</button> -->
@@ -331,11 +331,11 @@
                         <h3>RICERCA AVANZATA</h3>
                     </div>
                     <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-1 text-xs mt-3 dark:text-gray-400">
-                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center">Generi</div>
-                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center">Generi</div>
-                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center">Generi</div>
-                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center">Generi</div>
-                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center">Generi</div>
+                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center cursor-pointer">Generi</div>
+                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center cursor-pointer">Generi</div>
+                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center cursor-pointer">Generi</div>
+                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center cursor-pointer">Generi</div>
+                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center cursor-pointer">Generi</div>
                     </div>
                     <button class="w-full mt-2">
                         <div class="px-2 py-1 bg-primary w-full text-sm text-white">Cerca</div>
@@ -410,7 +410,9 @@
         
         if (screenWidth < 768) {
             slidesPreview = 3;
-        } 
+        } else if( screenWidth <= 640){
+            slidesPreview = 3;
+        }
 
     import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
         
