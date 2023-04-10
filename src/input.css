@@ -6,4 +6,7 @@
     .sliders{
         box-shadow: inset 0px -96px 43px 17px rgba(0, 0, 0, 0.45);
     }
+    .active {
+        background-color: #ccc;
+    }
 }

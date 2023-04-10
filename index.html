@@ -136,7 +136,7 @@
                                     </svg>
                             </button>
                         </div>
-                        <div class="grid-cols-2 w-full mt-1 rounded-md bg-secondary dark:bg-darksecondary text-black text-sm p-3 items-center justify-items-center gap-1 genre-visible hidden">
+                        <div class="grid-cols-2 w-full mt-1 rounded-md bg-secondary dark:text-white dark:bg-darksecondary text-black text-sm p-3 items-center justify-items-center gap-1 genre-visible hidden">
                             <h3>Arti Marziali</h3>
                             <h3>Avanguardia</h3>
                             
@@ -179,7 +179,7 @@
             <!-- MAINCONTENT -->
             <div class="md:w-[70%] space-y-2">
                 <!-- Slider -->
-                <div class="bg-lime-500 h-[40vh]">
+                <div class="h-[40vh]">
                     <div class="swiper w-full h-full">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide  relative">
@@ -211,14 +211,15 @@
                     <div class="md:flex block md:space-x-2 items-center">
                         <h1 class="text-primary dark:text-gray-300 font-medium">ULTIMI EPISODI</h1>
                         <div class="flex space-x-3 sm:text-sm mt-1 text-gray-600 dark:text-gray-400">
-                            <p class="border-b-2 border-primary">Tutti</p>
-                            <p>Sub-ITA</p>
-                            <p>Dub-ITA</p>
-                            <p>Tendenze</p>
+                            <button class="border-b-2 border-primary"  onclick="openTab(event, 'tab1')" id="defaultOpen">Tutti</button>
+                            <button  onclick="openTab(event, 'tab2')">Sub-ITA</button>
+                              
+                            <!-- <button>Dub-ITA</button>
+                            <button>Tendenze</button> -->
                         </div>
                     </div>
-                    <!-- Main -->
-                    <div class="grid md:grid-cols-5 sm:grid-cols-4 grid-cols-3 gap-2 mt-4">
+                    <!-- Main -->                        
+                    <div class="grid md:grid-cols-5 sm:grid-cols-4 grid-cols-3 gap-2 mt-4 tabcontent" id="tab1">
                         <a href="detail.html">
                             <div class="relative">
                                 <img class="" src="assets/img/tokyo.webp" alt="" srcset="">
@@ -226,9 +227,49 @@
                                 <h1 class="sm:text-sm font-medium dark:text-gray-300">Tokyo Revengers</h1>
                             </div>
                         </a>
+                        <a href="detail.html">
+                            <div class="relative">
+                                <img class="" src="assets/img/128318l.webp" alt="" srcset="">
+                                <div class="top-0 p-1 bg-primary w-fit text-xs text-white absolute"><p>Ep 87</p></div>
+                                <h1 class="sm:text-sm font-medium dark:text-gray-300">Bleach</h1>
+                            </div>
+                        </a>
+                        <a href="detail.html">
+                            <div class="relative">
+                                <img class="" src="assets/img/129579l.webp" alt="" srcset="">
+                                <div class="top-0 p-1 bg-primary w-fit text-xs text-white absolute"><p>Ep 21</p></div>
+                                <h1 class="sm:text-sm font-medium dark:text-gray-300">Digimon Hunter</h1>
+                            </div>
+                        </a>
+                        <a href="detail.html">
+                            <div class="relative">
+                                <img class="" src="assets/img/mao.webp" alt="" srcset="">
+                                <div class="top-0 p-1 bg-primary w-fit text-xs text-white absolute"><p>Ep 6</p></div>
+                                <h1 class="sm:text-sm font-medium dark:text-gray-300">Mao Sama</h1>
+                            </div>
+                        </a>
+                        <a href="detail.html">
+                            <div class="relative">
+                                <img class="" src="assets/img/vinland saga.webp" alt="" srcset="">
+                                <div class="top-0 p-1 bg-primary w-fit text-xs text-white absolute"><p>Ep 7</p></div>
+                                <h1 class="sm:text-sm font-medium dark:text-gray-300">Vinland Saga</h1>
+                            </div>
+                        </a>
+                        <a href="detail.html">
+                            <div class="relative">
+                                <img class="" src="assets/img/131828l.webp" alt="" srcset="">
+                                <div class="top-0 p-1 bg-primary w-fit text-xs text-white absolute"><p>Ep 12</p></div>
+                                <h1 class="sm:text-sm font-medium dark:text-gray-300">I Got a Cheat</h1>
+                            </div>
+                        </a>
                     </div>
+                    <div id="tab2" class="tabcontent">
+                        <div class="w-full h-[25vh] flex items-center justify-center">
+                            <h1 class="text-white dark:text-gray-300 font-semibold text-4xl">Tab 2</h1>
+                        </div>
+                      </div>
                 </div>
-                <div class="bg-secondary dark:bg-darksecondary w-full relative overflow-hidden p-3 space-y-3 hidden md:block">
+                <div class="bg-secondary dark:bg-darksecondary w-full relative overflow-hidden p-3 space-y-3">
                     <div class="border-b-[2px] border-gray-300 dark:border-gray-800 pb-3 text-primary dark:text-gray-300 font-medium">
                         <h3>ANIME IN CORSO</h3>
                     </div>
@@ -364,9 +405,16 @@
 
     </footer>
     <script type="module">
-        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+       var screenWidth = window.innerWidth;
+        var slidesPreview = 5;
         
-        var swiper = new Swiper('.swiper', {
+        if (screenWidth < 768) {
+            slidesPreview = 3;
+        } 
+
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+        
+    var swiper = new Swiper('.swiper', {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
@@ -381,7 +429,8 @@
     });
 
     var swiper2 = new Swiper('.swiper2', {
-      slidesPerView: 5,
+        
+      slidesPerView: slidesPreview,
       spaceBetween: 9,
       freeMode:true,
       pagination: {
