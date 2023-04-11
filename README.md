@@ -29,6 +29,10 @@ To dev this project run
 ```bash
   npm install
 ```
+- create dist fiolder
+```bash
+  create dist folder and create output.css file in it
+```
 - start dev
 ```bash
   npm run dev
