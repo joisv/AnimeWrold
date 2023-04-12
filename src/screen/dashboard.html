@@ -168,7 +168,7 @@
             </svg>
         </button>
     </div>
-    <main>
+    <main class="px-7 md:px-2">
         <div class="max-w-5xl mx-auto mt-2 bg-secondary dark:bg-darksecondary text-white dark:text-gray-300">
            <div class="h-[55vh] bg-cover bg-top relative sliders" style="background-image: url('../../assets/img/default_img.png');">
                <div class="flex items-center absolute bottom-2 left-2 space-x-4">
@@ -180,7 +180,8 @@
                </div>
            </div>
            <div class="p-4 flex space-x-3">
-                <div class="flex items-center space-x-2">
+            <a class="flex items-center" href="dashboard.html">
+                <div class="flex items-center space-x-2 home-active p-2">
                     <svg class="dark:fill-[#ededed] dark:stroke-[#ededed] fill-primary stroke-primary" width="28px" height="28px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" >
                         <g id="SVGRepo_bgCarrier" stroke-width="0"/>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
@@ -190,6 +191,8 @@
                     </svg>
                     <h3 class="text-primary dark:text-gray-300">Home profile</h3>
                 </div>
+            </a>
+            <a class="flex items-center" href="watchlist.html">
                 <div class="flex items-center space-x-2">
                     <svg class="dark:fill-[#ededed] dark:stroke-[#ededed] fill-primary stroke-primary" width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"/>
@@ -198,9 +201,10 @@
                     </svg>
                     <h3 class="text-primary dark:text-gray-300">Watchlist</h3>
                 </div>
+            </a>
            </div>
         </div>
-        <div class="max-w-5xl md:flex md:space-x-2 space-y-2 w-full mx-auto mt-2 p-2 md:p-0">
+        <div class="max-w-5xl md:flex md:space-x-2 w-full mx-auto mt-2 p-2 md:p-0">
             <!-- MAINCONTENT -->
             <div class="md:w-[70%] space-y-2">
                 <div class="bg-secondary dark:bg-darksecondary p-4 space-y-3">
@@ -274,7 +278,7 @@
                 </div>
             </div>
             <!-- SIDEBAR -->
-            <div class="md:w-[30%] h-20 space-y-2">
+            <div class="md:w-[30%] h-20 space-y-2 mt-2 md:mb-2">
                 <div class="bg-secondary dark:bg-darksecondary p-4 space-y-3">
                     <div class="flex items-center space-x-2">
                         <svg width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -452,6 +456,11 @@
         </div>
     </main>
     <script>
+        const pathname = window.location.pathname;
+        if(pathname === '/src/screen/dashboard.html'){
+            const watchlist = document.querySelector('.home-active')
+            watchlist.classList.add('bg-primary', 'rounded-sm')
+        }
         const visible = document.querySelector('.home-visible')
         const alertt = document.querySelector('#alert')
         const genre = document.querySelector('.genre-visible')

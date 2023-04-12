@@ -9,4 +9,7 @@
     .active {
         background-color: #ccc;
     }
+    .active-list{
+        background-color: #165FA7;
+    }
 }
