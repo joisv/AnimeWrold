@@ -9,7 +9,7 @@
 </head>
 <body class="bg-[#E2E2E2] dark:bg-bgdark">
     <header>
-        <div class="h-16 flex justify-center bg-secondary dark:bg-darksecondary px-3 md:px-0">
+        <div class="h-16 flex justify-center bg-secondary dark:bg-darksecondary px-3 md:px-2">
             <div class="max-w-5xl w-full flex items-center justify-between">
                 <!-- Title/Search -->
                 <div class="flex space-x-5">
@@ -43,8 +43,16 @@
                           </div>
                         </label>
                       </div>
-                    <div class="cursor-pointer hidden sm:block">
-                        <svg class="dark:fill-gray-300" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px" viewBox="0 0 24 24" width="30px" fill="#000000"><g><rect fill="none" height="30" width="30"/></g><g><g><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5zm10.79-1.38C16.45 15.8 14.32 15 12 15s-4.45.8-6.14 2.12C4.7 15.73 4 13.95 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12z"/><path d="M12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/></g></g></svg>
+                     <!-- User -->
+                     <div class="relative">
+                        <div class="auth hidden sm:block ">
+                        </div>
+                        <div class="absolute z-50 w-fit rounded-sm mr-2 bg-secondary p-1 px-3 hidden auth-drop">
+                            <ul class="flex flex-col">
+                                <li class="font-medium"><a href="dashboard.html">dashboard</a></li>
+                                <li class="font-medium"><button onclick="handleAuthLogout()">logout</button></li>
+                            </ul>
+                        </div>
                     </div>
                     <!-- Hamburger Menu -->
                     <button class="block md:hidden" onclick="handleButtonNavbar()">
@@ -258,6 +266,20 @@
          </div>
     </main>
     <script>
+        const auth = document.querySelector('.auth')
+        const login = `<a href="login.html"> <div class="cursor-pointer">
+                              <svg class="dark:fill-gray-300" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px" viewBox="0 0 24 24" width="30px" fill="#000000"><g><rect fill="none" height="30" width="30"/></g><g><g><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5zm10.79-1.38C16.45 15.8 14.32 15 12 15s-4.45.8-6.14 2.12C4.7 15.73 4 13.95 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12z"/><path d="M12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/></g></g></svg>
+                          </div> </a>`
+        const user = `<button onclick="handleAuthDropdown()" class="flex items-center space-x-2">
+                            <img class="w-12 h-12 rounded-full border-2 border-primary" src="../../assets/img/default_avatar.png" alt="">
+                            <p class="text-primary dark:text-gray-300 font-medium">jhondoe</p>
+                        </button>`
+        if(localStorage.getItem('email') && localStorage.getItem('password')) {
+            auth.innerHTML = user
+            
+        } else {
+            auth.innerHTML = login
+        }
         const pathname = window.location.pathname;
         if(pathname === '/src/screen/watchlist.html'){
             const watchlist = document.querySelector('.watchlist-active')
@@ -316,6 +338,18 @@
                 button.classList.add('active-list');
             });
         });
+
+        const handleAuthDropdown = () => {
+            const dropDown = document.querySelector('.auth-drop')
+            dropDown.classList.toggle('hidden')
+        }
+
+        const handleAuthLogout = () => {
+            localStorage.removeItem('email');
+            localStorage.removeItem('password');
+
+            window.location.href = 'login.html'
+        }
     </script>
 
     <!-- <script>
