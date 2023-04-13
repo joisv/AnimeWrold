@@ -6,9 +6,6 @@
     .sliders{
         box-shadow: inset 0px -96px 43px 17px rgba(0, 0, 0, 0.45);
     }
-    .active {
-        background-color: #ccc;
-    }
     .active-list{
         background-color: #165FA7;
     }
@@ -52,21 +49,20 @@
       
       .dFilt .btnFilter, .dFilt .filtDropToogle {
         width: 100%;
-        color: #fff;
+        /* color: #fff; */
         padding: 3px 6px;
         font-size: 12px;
         line-height: 1.5;
         border-radius: 2px;
-        background-color: red;
+        /* background-color: #202427; */
         display: inline-block;
         margin-bottom: 0;
         font-weight: 400;
         text-align: center;
         vertical-align: middle;
         touch-action: manipulation;
-        -webkit-appearance: button;
         cursor: pointer;
-        border: 1px solid red;
+        /* border: 1px solid #202427; */
         overflow: visible;
         white-space: nowrap;
         -webkit-user-select: none;
