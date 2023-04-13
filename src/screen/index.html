@@ -10,6 +10,7 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <title>AnimeWorld</title>
 </head>
 <body class="bg-[#E2E2E2] dark:bg-bgdark">
@@ -330,13 +331,115 @@
                     <div class="border-b-[2px] dark:border-gray-800 border-gray-300 pb-3 text-primary dark:text-gray-300">
                         <h3>RICERCA AVANZATA</h3>
                     </div>
-                    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-1 text-xs mt-3 dark:text-gray-400">
-                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center cursor-pointer">Generi</div>
-                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center cursor-pointer">Generi</div>
-                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center cursor-pointer">Generi</div>
-                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center cursor-pointer">Generi</div>
-                        <div class="px-2 py-1 bg-gray-300 dark:bg-bgdark rounded-md flex items-center justify-center cursor-pointer">Generi</div>
-                    </div>
+                    <div id="dagruelFilter" class='sS_Filter'>
+                        <form action="/search/label/" class="dFilt " method="GET">
+                          <div class="filtDrop">
+                            <button type="button" class="filtDropToogle" data-toggle="dropdown">Genre <span class="filtCount">All</span></button>
+                            <ul class="filtDropMenu filtCheckBox">
+                              <li><input type="checkbox" id="genre-action" name="label" value="Action"> <label for="genre-action">Action</label></li>
+                              <li><input type="checkbox" id="genre-adventure" name="label" value="Adventure"> <label for="genre-adventure">Adventure</label></li>
+                              <li><input type="checkbox" id="genre-comedy" name="label" value="Comedy"> <label for="genre-comedy">Comedy</label></li>
+                              <li><input type="checkbox" id="genre-demons" name="label" value="Demons"> <label for="genre-demons">Demons</label></li>
+                              <li><input type="checkbox" id="genre-drama" name="label" value="Drama"> <label for="genre-drama">Drama</label></li>
+                              <li><input type="checkbox" id="genre-ecchi" name="label" value="Ecchi"> <label for="genre-ecchi">Ecchi</label></li>
+                              <li><input type="checkbox" id="genre-fantasy" name="label" value="Fantasy"> <label for="genre-fantasy">Fantasy</label></li>
+                              <li><input type="checkbox" id="genre-game" name="label" value="Game"> <label for="genre-game">Game</label></li>
+                              <li><input type="checkbox" id="genre-harem" name="label" value="Harem"> <label for="genre-harem">Harem</label></li>
+                              <li><input type="checkbox" id="genre-historical" name="label" value="Historical"> <label for="genre-historical">Historical</label></li>
+                              <li><input type="checkbox" id="genre-horror" name="label" value="Horror"> <label for="genre-horror">Horror</label></li>
+                              <li><input type="checkbox" id="genre-magic" name="label" value="Magic"> <label for="genre-magic">Magic</label></li>
+                              <li><input type="checkbox" id="genre-mecha" name="label" value="Mecha"> <label for="genre-mecha">Mecha</label></li>
+                              <li><input type="checkbox" id="genre-military" name="label" value="Military"> <label for="genre-military">Military</label></li>
+                              <li><input type="checkbox" id="genre-music" name="label" value="Music"> <label for="genre-music">Music</label></li>
+                              <li><input type="checkbox" id="genre-mystery" name="label" value="Mystery"> <label for="genre-mystery">Mystery</label></li>
+                              <li><input type="checkbox" id="genre-parody" name="label" value="Parody"> <label for="genre-parody">Parody</label></li>
+                              <li><input type="checkbox" id="genre-police" name="label" value="Police"> <label for="genre-police">Police</label></li>
+                              <li><input type="checkbox" id="genre-psychological" name="label" value="Psychological"> <label for="genre-psychological">Psychological</label></li>
+                              <li><input type="checkbox" id="genre-romance" name="label" value="Romance"> <label for="genre-romance">Romance</label></li>
+                              <li><input type="checkbox" id="genre-school" name="label" value="School"> <label for="genre-school">School</label></li>
+                              <li><input type="checkbox" id="genre-sci-fi" name="label" value="Sci-Fi"> <label for="genre-sci-fi">Sci-Fi</label></li>
+                              <li><input type="checkbox" id="genre-seinen" name="label" value="Seinen"> <label for="genre-seinen">Seinen</label></li>
+                              <li><input type="checkbox" id="genre-shoujo" name="label" value="Shoujo"> <label for="genre-shoujo">Shoujo</label></li>
+                              <li><input type="checkbox" id="genre-shoujo-ai" name="label" value="Shoujo-ai"> <label for="genre-shoujo-ai">Shoujo Ai</label></li>
+                              <li><input type="checkbox" id="genre-shounen" name="label" value="Shounen"> <label for="genre-shounen">Shounen</label></li>
+                              <li><input type="checkbox" id="genre-slice-of-life" name="label" value="Slice of Life"> <label for="genre-slice-of-life">Slice of Life</label></li>
+                              <li><input type="checkbox" id="genre-space" name="label" value="Space"> <label for="genre-space">Space</label></li>
+                              <li><input type="checkbox" id="genre-sports" name="label" value="Sports"> <label for="genre-sports">Sports</label></li>
+                              <li><input type="checkbox" id="genre-super-power" name="label" value="Super Power"> <label for="genre-super-power">Super Power</label></li>
+                              <li><input type="checkbox" id="genre-supernatural" name="label" value="Supernatural"> <label for="genre-supernatural">Supernatural</label></li>
+                            </ul>
+                          </div>
+                          <div class="filtDrop">
+                            <button type="button" class="filtDropToogle" data-toggle="dropdown"> Season <span class="filtCount">All</span></button>
+                            <ul class="filtDropMenu filtCheckBox">
+                              <li><input type="checkbox" id="season-fall-2018" name="label" value="Fall 2018"> <label for="season-fall-2018">Fall 2018</label></li>
+                              <li><input type="checkbox" id="season-fall-2019" name="label" value="Fall 2019"> <label for="season-fall-2019">Fall 2019</label></li>
+                              <li><input type="checkbox" id="season-fall-2020" name="label" value="Fall 2020"> <label for="season-fall-2020">Fall 2020</label></li>
+                              <li><input type="checkbox" id="season-fall-2021" name="label" value="Fall 2021"> <label for="season-fall-2021">Fall 2021</label></li>
+                              <li><input type="checkbox" id="season-spring-2018" name="label" value="Spring 2018"> <label for="season-spring-2018">Spring 2018</label></li>
+                              <li><input type="checkbox" id="season-spring-2019" name="label" value="Spring 2019"> <label for="season-spring-2019">Spring 2019</label></li>
+                              <li><input type="checkbox" id="season-spring-2020" name="label" value="Spring 2020"> <label for="season-spring-2020">Spring 2020</label></li>
+                              <li><input type="checkbox" id="season-spring-2021" name="label" value="Spring 2021"> <label for="season-spring-2021">Spring 2021</label></li>
+                              <li><input type="checkbox" id="season-summer-2018" name="label" value="Summer 2018"> <label for="season-summer-2018">Summer 2018</label></li>
+                              <li><input type="checkbox" id="season-summer-2019" name="label" value="Summer 2019"> <label for="season-summer-2019">Summer 2019</label></li>
+                              <li><input type="checkbox" id="season-summer-2020" name="label" value="Summer 2020"> <label for="season-summer-2020">Summer 2020</label></li>
+                              <li><input type="checkbox" id="season-summer-2021" name="label" value="Summer 2021"> <label for="season-summer-2021">Summer 2021</label></li>
+                              <li><input type="checkbox" id="season-winter-2000" name="label" value="Winter 2018"> <label for="season-winter-2018">Winter 2018</label></li>
+                              <li><input type="checkbox" id="season-winter-2020" name="label" value="Winter 2019"> <label for="season-winter-2019">Winter 2019</label></li>
+                              <li><input type="checkbox" id="season-winter-2000" name="label" value="Winter 2020"> <label for="season-winter-2020">Winter 2020</label></li>
+                              <li><input type="checkbox" id="season-winter-2020" name="label" value="Winter 2021"> <label for="season-winter-2021">Winter 2021</label></li>
+                            </ul>
+                          </div>
+                          <div class="filtDrop">
+                            <button type="button" class="filtDropToogle" data-toggle="dropdown"> Studio <span class="filtCount">All</span></button>
+                            <ul class="filtDropMenu filtCheckBox">
+                              <li><input type="checkbox" id="studio-a-1-pictures" name="label" value="A-1 Pictures"> <label for="studio-a-1-pictures">A-1 Pictures</label></li>
+                              <li><input type="checkbox" id="studio-arvo-animation" name="label" value="Arvo Animation"> <label for="studio-arvo-animation">Arvo Animation</label></li>
+                              <li><input type="checkbox" id="studio-ashi-production" name="label" value="Ashi Production"> <label for="studio-ashi-production">Ashi Production</label></li>
+                              <li><input type="checkbox" id="studio-cloverworks" name="label" value="CloverWorks"> <label for="studio-cloverworks">CloverWorks</label></li>
+                              <li><input type="checkbox" id="studio-j-c-staff" name="label" value="J.C.Staff"> <label for="studio-j-c-staff">J.C.Staff</label></li>
+                              <li><input type="checkbox" id="studio-kyoto-animation" name="label" value="Kyoto Animation"> <label for="studio-kyoto-animation">Kyoto Animation</label></li>
+                              <li><input type="checkbox" id="studio-madhouse" name="label" value="Madhouse"> <label for="studio-madhouse">Madhouse</label></li>
+                              <li><input type="checkbox" id="studio-olm" name="label" value="OLM"> <label for="studio-olm">OLM</label></li>
+                              <li><input type="checkbox" id="studio-production-i-g" name="label" value="Production I.G"> <label for="studio-production-i-g">Production I.G</label></li>
+                              <li><input type="checkbox" id="studio-production-reed" name="label" value="Production Reed"> <label for="studio-production-reed">Production Reed</label></li>
+                              <li><input type="checkbox" id="studio-seven-arcs" name="label" value="Seven Arcs"> <label for="studio-seven-arcs">Seven Arcs</label></li>
+                              <li><input type="checkbox" id="studio-silver" name="label" value="Silver"> <label for="studio-silver">Silver</label></li>
+                              <li><input type="checkbox" id="studio-silver-link" name="label" value="Silver Link."> <label for="studio-silver-link">Silver Link.</label></li>
+                              <li><input type="checkbox" id="studio-sunrise" name="label" value="Sunrise"> <label for="studio-sunrise">Sunrise</label></li>
+                              <li><input type="checkbox" id="studio-tear-studio" name="label" value="tear-studio"> <label for="studio-tear-studio">tear-studio</label></li>
+                              <li><input type="checkbox" id="studio-tezuka-productions" name="label" value="Tezuka Productions"> <label for="studio-tezuka-productions">Tezuka Productions</label></li>
+                              <li><input type="checkbox" id="studio-tms-entertainment" name="label" value="TMS Entertainment"> <label for="studio-tms-entertainment">TMS Entertainment</label></li>
+                              <li><input type="checkbox" id="studio-toei-animation" name="label" value="Toei Animation"> <label for="studio-toei-animation">Toei Animation</label></li>
+                              <li><input type="checkbox" id="studio-trans-arts" name="label" value="Trans Arts"> <label for="studio-trans-arts">Trans Arts</label></li>
+                              <li><input type="checkbox" id="studio-ufotable" name="label" value="ufotable"> <label for="studio-ufotable">ufotable</label></li>
+                              <li><input type="checkbox" id="studio-wit-studio" name="label" value="Wit Studio"> <label for="studio-wit-studio">Wit Studio</label></li>
+                              <li><input type="checkbox" id="studio-xebec" name="label" value="Xebec"> <label for="studio-xebec">Xebec</label></li>
+                            </ul>
+                          </div>
+                          <div class="filtDrop">
+                            <button type="button" class="filtDropToogle" data-toggle="dropdown"> Status <span class="filtCount">All</span></button>
+                            <ul class="filtDropMenu filtRadio">
+                              <li> <input type="radio" id="anime_status-ongoing" name="status" value="Ongoing"> <label for="anime_status-ongoing">Ongoing</label></li>
+                              <li> <input type="radio" id="anime_status-completed" name="status" value="Completed"> <label for="anime_status-completed">Completed</label></li>
+                              <li> <input type="radio" id="anime_status-hiatus" name="status" value="Hiatus"> <label for="anime_status-hiatus">Hiatus</label></li>
+                            </ul>
+                          </div>
+                          <div class="filtDrop">
+                            <button type="button" class="filtDropToogle" data-toggle="dropdown"> Type <span class="filtCount">All</span></button>
+                            <ul class="filtDropMenu filtRadio">
+                              <li><input type="radio" id="type-tv" name="type" value="TV"><label for="type-tv"> TV Series</label></li>
+                              <li><input type="radio" id="type-ova" name="type" value="OVA"><label for="type-ova"> OVA</label></li>
+                              <li><input type="radio" id="type-movie" name="type" value="Movie"><label for="type-movie"> Movie</label></li>
+                              <li><input type="radio" id="type-live action" name="type" value="Live Action"><label for="type-live action"> Live Action</label></li>
+                              <li><input type="radio" id="type-special" name="type" value="Special"><label for="type-special"> Special</label></li>
+                              <li><input type="radio" id="type-bd" name="type" value="BD"><label for="type-bd"> BD</label></li>
+                              <li><input type="radio" id="type-ona" name="type" value="ONA"><label for="type-ona"> ONA</label></li>
+                            </ul>
+                          </div>
+                          <div class="filtSubmit"><button type="submit" class="btnFilter">Search</button></div>
+                        </form>
+                      </div>
                     <button class="w-full mt-2">
                         <div class="px-2 py-1 bg-primary w-full text-sm text-white">Cerca</div>
                     </button>
@@ -464,6 +567,47 @@
 
         // Set the default tab to be active
         document.getElementById("defaultOpen").click();
+
+        $(document).on("click", "#dagruelFilter .filtDropToogle", function() {
+        $(this).parent().hasClass("open") || $(document).find("#dagruelFilter .filtDrop").removeClass("open"), $(this).parent().toggleClass("open")
+        }), $(document).on("click", function(t) {
+        $(t.target).closest(".filtDropToogle").length || $(document).find("#dagruelFilter .filtDrop").removeClass("open")
+        }), jQuery(document).ready(function(t) {
+        t(".dFilt .filtDrop ul").click(function(t) {
+            t.stopPropagation()
+        }), t(".dFilt .filtDrop ul").each(function(e, n) {
+            var l = t(this).find("input:checked"),
+            i = l.closest(".filtDrop").find("button span");
+            1 == l.length ? i.html(l.parent().find("label").html()) : l.length > 1 ? i.html(l.length + " selected") : 0 == l.length && i.html("All")
+        }), t(".filtDropMenu input").on("click", function(e) {
+            var n = t(this).parent().parent(),
+            l = n.find("input:checked"),
+            i = n.parent().find("button span");
+            1 == l.length ? i.html(l.parent().find("label").html()) : l.length > 1 ? i.html(l.length + " selected") : 0 == l.length && i.html("All")
+        })
+        }), $("#dagruelFilter .dFilt").submit(function(t) {
+        t.preventDefault();
+        var e = $(this).serializeArray(),
+            n = $.map(e, function(t, e) {
+            return t.value
+            }).join("+");
+        if (0 == n.length) {
+            var l = "/search";
+
+            //hapus alert
+            alert(l)
+
+            window.location.href = l
+        } else {
+            var l = $(this).attr("action") + n + "?&max-results=20";
+
+            //hapus alert
+            alert(l)
+
+            
+            window.location.href = l
+        }
+        });
     </script>
     <!-- Slider script -->
     <script type="module">
