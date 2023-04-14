@@ -335,7 +335,7 @@
                 </div>
             </div>
             <!-- SIDEBAR -->
-            <div class="md:w-[30%] h-20 space-y-2">
+            <div class="md:w-[30%] h-20 space-y-2 relative">
                 <!-- Sidebar 1 -->
                 <div class="p-2 bg-secondary dark:bg-darksecondary rounded-sm">
                     <div class="border-b-[2px] dark:border-gray-800 border-gray-300 pb-3 text-primary dark:text-gray-300">
@@ -511,19 +511,194 @@
                     </div>
                    
                 </div>
+                <div class="bg-footer p-5 mt-8 md:hidden block absolute -left-2 w-screen">
+                    <div class="max-w-5xl mx-auto space-y-4">
+                       
+                        <div class="w-full h-full top-0 -left-8 flex flex-col items-center justify-center">
+                            <div class="mx-auto">
+                                <h1 class="text-4xl shadow-xl text-white font-semibold">AnimeWorld</h1>
+                                <div class="flex items-center justify-center mt-8">
+                                    <!-- Instagram -->
+                                    <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <g id="SVGRepo_iconCarrier"> <path d="M12 7.90001C11.1891 7.90001 10.3964 8.14048 9.72218 8.59099C9.04794 9.0415 8.52243 9.68184 8.21211 10.431C7.90179 11.1802 7.8206 12.0046 7.9788 12.7999C8.13699 13.5952 8.52748 14.3258 9.10088 14.8992C9.67427 15.4725 10.4048 15.863 11.2001 16.0212C11.9955 16.1794 12.8198 16.0982 13.569 15.7879C14.3182 15.4776 14.9585 14.9521 15.409 14.2779C15.8596 13.6036 16.1 12.8109 16.1 12C16.1013 11.4612 15.9962 10.9275 15.7906 10.4295C15.585 9.93142 15.2831 9.47892 14.9021 9.09794C14.5211 8.71695 14.0686 8.415 13.5706 8.20942C13.0725 8.00385 12.5388 7.8987 12 7.90001ZM12 14.67C11.4719 14.67 10.9557 14.5134 10.5166 14.22C10.0776 13.9267 9.73534 13.5097 9.53326 13.0218C9.33117 12.5339 9.2783 11.9971 9.38132 11.4791C9.48434 10.9612 9.73863 10.4854 10.112 10.112C10.4854 9.73863 10.9612 9.48434 11.4791 9.38132C11.9971 9.2783 12.5339 9.33117 13.0218 9.53326C13.5097 9.73534 13.9267 10.0776 14.22 10.5166C14.5134 10.9557 14.67 11.4719 14.67 12C14.67 12.7081 14.3887 13.3873 13.888 13.888C13.3873 14.3887 12.7081 14.67 12 14.67ZM17.23 7.73001C17.23 7.9278 17.1714 8.12114 17.0615 8.28558C16.9516 8.45003 16.7954 8.57821 16.6127 8.65389C16.43 8.72958 16.2289 8.74938 16.0349 8.7108C15.8409 8.67221 15.6628 8.57697 15.5229 8.43712C15.3831 8.29727 15.2878 8.11909 15.2492 7.92511C15.2106 7.73112 15.2304 7.53006 15.3061 7.34733C15.3818 7.16461 15.51 7.00843 15.6744 6.89855C15.8389 6.78866 16.0322 6.73001 16.23 6.73001C16.4952 6.73001 16.7496 6.83537 16.9371 7.02291C17.1247 7.21044 17.23 7.4648 17.23 7.73001ZM19.94 8.73001C19.9691 7.48684 19.5054 6.28261 18.65 5.38001C17.7522 4.5137 16.5474 4.03897 15.3 4.06001C14 4.00001 10 4.00001 8.70001 4.06001C7.45722 4.0331 6.25379 4.49652 5.35001 5.35001C4.49465 6.25261 4.03093 7.45684 4.06001 8.70001C4.00001 10 4.00001 14 4.06001 15.3C4.03093 16.5432 4.49465 17.7474 5.35001 18.65C6.25379 19.5035 7.45722 19.9669 8.70001 19.94C10.02 20.02 13.98 20.02 15.3 19.94C16.5432 19.9691 17.7474 19.5054 18.65 18.65C19.5054 17.7474 19.9691 16.5432 19.94 15.3C20 14 20 10 19.94 8.70001V8.73001ZM18.24 16.73C18.1042 17.074 17.8993 17.3863 17.6378 17.6478C17.3763 17.9093 17.064 18.1142 16.72 18.25C15.1676 18.5639 13.5806 18.6715 12 18.57C10.4228 18.6716 8.83902 18.564 7.29001 18.25C6.94608 18.1142 6.63369 17.9093 6.37223 17.6478C6.11076 17.3863 5.90579 17.074 5.77001 16.73C5.35001 15.67 5.44001 13.17 5.44001 12.01C5.44001 10.85 5.35001 8.34001 5.77001 7.29001C5.90196 6.94268 6.10547 6.62698 6.36733 6.36339C6.62919 6.09981 6.94355 5.89423 7.29001 5.76001C8.83902 5.44599 10.4228 5.33839 12 5.44001C13.5806 5.33856 15.1676 5.44616 16.72 5.76001C17.064 5.89579 17.3763 6.10076 17.6378 6.36223C17.8993 6.62369 18.1042 6.93608 18.24 7.28001C18.66 8.34001 18.56 10.84 18.56 12C18.56 13.16 18.66 15.67 18.24 16.72V16.73Z" fill="#fcfcfc"/> </g>
+                                    </svg>
+                                    <!-- Telegram -->
+                                    <svg fill="#fcfcfc" width="37px" height="37px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fcfcfc" stroke-width="0.00024000000000000003">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <g id="SVGRepo_iconCarrier">
+                                        <path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/>
+                                        </g>
+                                    </svg>
+                                    <!-- Mail -->
+                                    <!-- <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="34px" viewBox="0 0 512 512" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.00512">
+    
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                        
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                        
+                                        <g id="SVGRepo_iconCarrier"> <style type="text/css">  .st0{fill:#fcfcfc;}  </style> <g> <path class="st0" d="M496.563,68.828H15.438C6.922,68.828,0,75.75,0,84.281v30.391l256,171.547l256-171.563V84.281 C512,75.75,505.078,68.828,496.563,68.828z"/> <path class="st0" d="M0,178.016v203.391c0,34.125,27.641,61.766,61.781,61.766h388.438c34.141,0,61.781-27.641,61.781-61.766V178 L256,349.563L0,178.016z"/> </g> </g>
+                                        
+                                        </svg> -->
+                                    <!--Feed -->
+                                    <svg class="ml-4" fill="#fcfcfc" height="28px" width="28px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" stroke="#fcfcfc" stroke-width="0.00512">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <g id="SVGRepo_iconCarrier"> <path d="M58.2,395.6C26,395.6,0,421.7,0,453.8S26,512,58.2,512c32.1,0,58.2-26,58.2-58.2S90.3,395.6,58.2,395.6z M0,0v93.1 c231.4,0,418.9,187.5,418.9,418.9H512C512,229.2,282.8,0,0,0z M0,186.2v93.1c128.5,0,232.7,104.2,232.7,232.7h93.1 C325.8,332,179.9,186.2,0,186.2z"/> </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-sm text-white">Copyright © animeworld.tv. All Rights Reserved</p>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="">
+                                <h1 class="font-medium text-white dark:text-gray-300 text-sm">AIUTO</h1>
+                                <ul class="grid grid-cols-4 text-xs text-blue-300 mt-2">
+                                    <li>Contattaci</li>
+                                    <li>Termini e</li>
+                                    <li>Condizioni &</li>
+                                    <li>FAQ</li>
+                                    <li>Policy sulla</li>
+                                    <li>Privacy e i</li>
+                                    <li>cookie</li>
+                                    <li>Richiedi una</li>
+                                    <li>serie</li>
+                                </ul>
+                            </div>
+                            <div class="mt-2">
+                                <h1 class="font-medium text-white dark:text-gray-300 text-sm">LINK</h1>
+                                <ul class="text-sm text-blue-300 mt-2">
+                                    <li>Nuove aggiunte</li>
+                                    <li>Ultimi episodi</li>
+                                   
+                                </ul>
+                            </div>
+                            
+                        </div>
+        
+                    </div>
+                </div>
             </div>
         </div>
+        
     </main>
     <footer>
+        <div class="bg-footer p-5 mt-8 hidden md:block">
+            <div class="max-w-5xl mx-auto space-y-4">
+                <div class="flex space-x-2 items-center text-xl font-medium text-white dark:text-gray-300">
+                    <h1 class="">Litsa A-Z</h1>
+                    <div class="bg-blue-400 w-[1px] h-6"></div>
+                    <p class="text-base font-normal">Cerca un anime in ordine alfabetico dalla A alla Z.</p>
+                </div>
+                <ul class="space-x-2 w-full ull">
+                    <li><a class="text-gray-600 bg-secondary px-1 py-[2px] text-sm" href="#" >Tutti</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-1 py-[2px] text-sm" href="#" >0-9</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >A</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >B</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >C</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >D</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >E</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >F</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >G</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >H</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >I</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >J</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >K</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >L</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >M</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >N</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >O</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >P</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >Q</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >R</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >S</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >T</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >U</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >V</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >W</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >X</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >Y</a></li>
+                    <li><a class="text-gray-600 bg-secondary px-2 py-[2px] text-sm" href="#" >Z</a></li>
+                </ul>
+                <div class="flex space-x-6  relative">
+                    <div class="">
+                        <h1 class="font-medium text-white dark:text-gray-300 text-sm">AIUTO</h1>
+                        <ul class="text-sm text-blue-300 mt-2">
+                            <li>Contattaci</li>
+                            <li>Termini e</li>
+                            <li>Condizioni &</li>
+                            <li>FAQ</li>
+                            <li>Policy sulla</li>
+                            <li>Privacy e i</li>
+                            <li>cookie</li>
+                            <li>Richiedi una</li>
+                            <li>serie</li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h1 class="font-medium text-white dark:text-gray-300 text-sm">LINK</h1>
+                        <ul class="text-sm text-blue-300 mt-2">
+                            <li>Nuove aggiunte</li>
+                            <li>Ultimi episodi</li>
+                           
+                        </ul>
+                    </div>
+                    <div class="w-full h-full absolute top-0 -left-8 flex flex-col items-center justify-center">
+                        <div class="mx-auto">
+                            <h1 class="text-4xl shadow-xl text-white font-semibold">AnimeWorld</h1>
+                            <div class="flex items-center justify-center mt-8">
+                                <!-- Instagram -->
+                                <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g id="SVGRepo_iconCarrier"> <path d="M12 7.90001C11.1891 7.90001 10.3964 8.14048 9.72218 8.59099C9.04794 9.0415 8.52243 9.68184 8.21211 10.431C7.90179 11.1802 7.8206 12.0046 7.9788 12.7999C8.13699 13.5952 8.52748 14.3258 9.10088 14.8992C9.67427 15.4725 10.4048 15.863 11.2001 16.0212C11.9955 16.1794 12.8198 16.0982 13.569 15.7879C14.3182 15.4776 14.9585 14.9521 15.409 14.2779C15.8596 13.6036 16.1 12.8109 16.1 12C16.1013 11.4612 15.9962 10.9275 15.7906 10.4295C15.585 9.93142 15.2831 9.47892 14.9021 9.09794C14.5211 8.71695 14.0686 8.415 13.5706 8.20942C13.0725 8.00385 12.5388 7.8987 12 7.90001ZM12 14.67C11.4719 14.67 10.9557 14.5134 10.5166 14.22C10.0776 13.9267 9.73534 13.5097 9.53326 13.0218C9.33117 12.5339 9.2783 11.9971 9.38132 11.4791C9.48434 10.9612 9.73863 10.4854 10.112 10.112C10.4854 9.73863 10.9612 9.48434 11.4791 9.38132C11.9971 9.2783 12.5339 9.33117 13.0218 9.53326C13.5097 9.73534 13.9267 10.0776 14.22 10.5166C14.5134 10.9557 14.67 11.4719 14.67 12C14.67 12.7081 14.3887 13.3873 13.888 13.888C13.3873 14.3887 12.7081 14.67 12 14.67ZM17.23 7.73001C17.23 7.9278 17.1714 8.12114 17.0615 8.28558C16.9516 8.45003 16.7954 8.57821 16.6127 8.65389C16.43 8.72958 16.2289 8.74938 16.0349 8.7108C15.8409 8.67221 15.6628 8.57697 15.5229 8.43712C15.3831 8.29727 15.2878 8.11909 15.2492 7.92511C15.2106 7.73112 15.2304 7.53006 15.3061 7.34733C15.3818 7.16461 15.51 7.00843 15.6744 6.89855C15.8389 6.78866 16.0322 6.73001 16.23 6.73001C16.4952 6.73001 16.7496 6.83537 16.9371 7.02291C17.1247 7.21044 17.23 7.4648 17.23 7.73001ZM19.94 8.73001C19.9691 7.48684 19.5054 6.28261 18.65 5.38001C17.7522 4.5137 16.5474 4.03897 15.3 4.06001C14 4.00001 10 4.00001 8.70001 4.06001C7.45722 4.0331 6.25379 4.49652 5.35001 5.35001C4.49465 6.25261 4.03093 7.45684 4.06001 8.70001C4.00001 10 4.00001 14 4.06001 15.3C4.03093 16.5432 4.49465 17.7474 5.35001 18.65C6.25379 19.5035 7.45722 19.9669 8.70001 19.94C10.02 20.02 13.98 20.02 15.3 19.94C16.5432 19.9691 17.7474 19.5054 18.65 18.65C19.5054 17.7474 19.9691 16.5432 19.94 15.3C20 14 20 10 19.94 8.70001V8.73001ZM18.24 16.73C18.1042 17.074 17.8993 17.3863 17.6378 17.6478C17.3763 17.9093 17.064 18.1142 16.72 18.25C15.1676 18.5639 13.5806 18.6715 12 18.57C10.4228 18.6716 8.83902 18.564 7.29001 18.25C6.94608 18.1142 6.63369 17.9093 6.37223 17.6478C6.11076 17.3863 5.90579 17.074 5.77001 16.73C5.35001 15.67 5.44001 13.17 5.44001 12.01C5.44001 10.85 5.35001 8.34001 5.77001 7.29001C5.90196 6.94268 6.10547 6.62698 6.36733 6.36339C6.62919 6.09981 6.94355 5.89423 7.29001 5.76001C8.83902 5.44599 10.4228 5.33839 12 5.44001C13.5806 5.33856 15.1676 5.44616 16.72 5.76001C17.064 5.89579 17.3763 6.10076 17.6378 6.36223C17.8993 6.62369 18.1042 6.93608 18.24 7.28001C18.66 8.34001 18.56 10.84 18.56 12C18.56 13.16 18.66 15.67 18.24 16.72V16.73Z" fill="#fcfcfc"/> </g>
+                                </svg>
+                                <!-- Telegram -->
+                                <svg fill="#fcfcfc" width="37px" height="37px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fcfcfc" stroke-width="0.00024000000000000003">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g id="SVGRepo_iconCarrier">
+                                    <path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/>
+                                    </g>
+                                </svg>
+                                <!-- Mail -->
+                                <!-- <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="34px" viewBox="0 0 512 512" xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.00512">
 
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    
+                                    <g id="SVGRepo_iconCarrier"> <style type="text/css">  .st0{fill:#fcfcfc;}  </style> <g> <path class="st0" d="M496.563,68.828H15.438C6.922,68.828,0,75.75,0,84.281v30.391l256,171.547l256-171.563V84.281 C512,75.75,505.078,68.828,496.563,68.828z"/> <path class="st0" d="M0,178.016v203.391c0,34.125,27.641,61.766,61.781,61.766h388.438c34.141,0,61.781-27.641,61.781-61.766V178 L256,349.563L0,178.016z"/> </g> </g>
+                                    
+                                    </svg> -->
+                                <!--Feed -->
+                                <svg class="ml-4" fill="#fcfcfc" height="28px" width="28px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" stroke="#fcfcfc" stroke-width="0.00512">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <g id="SVGRepo_iconCarrier"> <path d="M58.2,395.6C26,395.6,0,421.7,0,453.8S26,512,58.2,512c32.1,0,58.2-26,58.2-58.2S90.3,395.6,58.2,395.6z M0,0v93.1 c231.4,0,418.9,187.5,418.9,418.9H512C512,229.2,282.8,0,0,0z M0,186.2v93.1c128.5,0,232.7,104.2,232.7,232.7h93.1 C325.8,332,179.9,186.2,0,186.2z"/> </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm text-white">Copyright © animeworld.tv. All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </footer>
     <script>
         const auth = document.querySelector('.auth')
         const dropDown = document.querySelector('.auth-drop')
 
-        const login = `<div class="cursor-pointer">
-                            <svg class="dark:fill-gray-300" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px" viewBox="0 0 24 24" width="30px" fill="#000000"><g><rect fill="none" height="30" width="30"/></g><g><g><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5zm10.79-1.38C16.45 15.8 14.32 15 12 15s-4.45.8-6.14 2.12C4.7 15.73 4 13.95 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12z"/><path d="M12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/></g></g></svg>
-                        </div>`
+        const login = `<a href="login.html"> <div class="cursor-pointer">
+                              <svg class="dark:fill-gray-300" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px" viewBox="0 0 24 24" width="30px" fill="#000000"><g><rect fill="none" height="30" width="30"/></g><g><g><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5zm10.79-1.38C16.45 15.8 14.32 15 12 15s-4.45.8-6.14 2.12C4.7 15.73 4 13.95 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12z"/><path d="M12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/></g></g></svg>
+                          </div> </a>`
         const user = `<button onclick="handleAuthDropdown()" class="flex items-center space-x-2">
                             <img class="w-12 h-12 rounded-full border-2 border-primary" src="../../assets/img/default_avatar.png" alt="">
                             <p class="text-primary dark:text-gray-300 font-medium">jhondoe</p>

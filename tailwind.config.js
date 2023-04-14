@@ -9,7 +9,8 @@ module.exports = {
         secondary: '#F8F9FA',
         bgdark: '#202427',
         darksecondary: '#343a40',
-        darkmedium: '#343A41'
+        darkmedium: '#343A41',
+        footer: '#135394'
       },
     },
   },

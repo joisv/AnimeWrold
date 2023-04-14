@@ -168,6 +168,19 @@
       .dFilt .filtDrop .filtRadio li input+label:before, .dFilt .filtDrop .filtRadio li input:not(:checked)+label:before {
         border-radius: 50%
       }
+      .ull{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+      .ull li{
+        flex: 1 0 auto;
+        width: auto;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 0.3rem;
+      }
       
       @media screen and (max-width:900px) {
         .dFilt .filtDrop ul {
