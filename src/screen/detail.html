@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../dist/output.css">
 </head>
 <body class="bg-[#E2E2E2] dark:bg-bgdark">
+   
     <header>
         <div class="h-16 flex justify-center bg-secondary dark:bg-darksecondary px-3 md:px-2">
             <div class="max-w-5xl w-full flex items-center justify-between">
@@ -24,7 +25,7 @@
                         <form class="flex items-center">   
                             <div class="relative w-full">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                    <svg width="20px" aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
                                 </div>
                                 <input type="text" id="simple-search" class="bg-gray-50 dark:bg-bgdark border border-gray-300 text-gray-900 dark:border-gray-500 dark:text-gray-300 text-xs rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-[130%] pl-10 p-2.5 focus:outline-none" placeholder="Search" required>
                             </div>
@@ -221,6 +222,39 @@
            </div>
         </div>
     </nav>
+     <!-- modals -->
+     <div class="w-full -translate-y-[200%] top-[45vh] ease-in-out duration-200 z-50 h-screen absolute modals">
+        <div class="max-w-xl m-auto bg-bgdark p-4">
+            <h1 class="text-xl font-medium dark:text-gray-300 border-b-2 border-gray-500 pb-5">Segnala un problema</h1>
+            <p class="text-sm dark:text-gray-400 m-3">Questo modulo serve per segnalare episodi non funzionanti o problemi allo staff. Il tempo per risolvere il problema in genere richiede 48 ore.
+                Prima di inviare la richiesta, consigliamo di usare il browser Google Chrome.</p>
+            <form>
+                <div class="mb-6">
+                <label for="" class="block mb-2 text-sm  text-gray-900 dark:text-white">Name serie</label>
+                <input  id="" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+                </div>
+                <div class="mb-6">
+                <label for="" class="block mb-2 text-sm text-gray-900 dark:text-white">Episidio</label>
+                <input type="" id="" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+                </div>
+                <div class="mb-6">
+                <label for="repeat-password" class="block mb-2 text-sm text-gray-900 dark:text-white">Browser</label>
+                <input type="" id="repeat-" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+                </div>
+                <div class="mb-6">
+                <label for="repeat-password" class="block mb-2 text-sm text-gray-900 dark:text-white">Piattafforma</label>
+                <input type="" id="repeat-" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Problema</label>
+                    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
+                </div>
+               
+               
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Invia la segnalazione</button>
+            </form>
+        </div>
+     </div>
     <!-- Alert! -->
     <div class="max-w-5xl bg-[#DC3545] dark:bg-green-700 p-2 mx-auto justify-between text-center mt-2 rounded-sm text-white flex space-x-2" id="alert">
         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid maxime reiciendis saepe molestias accusamus maiores.</h3>
@@ -232,8 +266,16 @@
             </svg>
         </button>
     </div>
-    <main>
-        <div class="max-w-5xl md:flex md:space-x-2 space-y-2 w-full mx-auto mt-2 p-2 md:p-0">
+    <div class="max-w-5xl mx-auto mt-2">
+        <!-- Video Player -->
+        <div class="md:w-[70%] w-full sm:min-h-[66vh] min-h-[35vh] bg-red-500 rounded-sm players ease-in duration-200">
+                            
+        </div>
+    </div>
+
+    <main class="">
+        
+        <div class="max-w-5xl md:flex md:space-x-2 w-full mx-auto mt-2 p-2 md:p-0">
             <!-- MAINCONTENT -->
             <div class="md:w-[70%] space-y-2">
                 <!-- title -->
@@ -241,14 +283,11 @@
                     <h1>Fumetsu no anata</h1>
                 </div>
                 <!-- main -->
-                <section class="space-y-2">
-                    <!-- Video Player -->
-                    <div class="w-full sm:min-h-[66vh] min-h-[35vh] bg-red-500 rounded-sm">
-                        
-                    </div>
+                <section class="space-y-2 relative">
+
                     <!-- Controller -->
                     <div class="bg-secondary dark:bg-darksecondary p-2 space-y-2 dark:bg-darksecondarycondary">
-                        <div class=" text-gray-600 text-xs md:text-sm md:flex md:items-center md:justify-between grid grid-cols-3 gap-2 items-center dark:text-gray-400">
+                        <div class=" text-gray-600 text-xs md:text-sm justify-between flex flex-wrap space-y-3 space-x-2 sm:space-y-0 items-center dark:text-gray-400">
                             <div class="hover:text-primary cursor-pointer">
                                 <h4>@Player alternativo</h4>
                             </div>
@@ -258,33 +297,199 @@
                             <div class="hover:text-primary cursor-pointer">
                                 <h4>>Successivo</h4>
                             </div>
-                            <div class="hover:text-primary cursor-pointer">
-                                <h4>=Watchlist</h4>
-                            </div>
-                            <div class="hover:text-primary cursor-pointer">
-                                <h4>VCondividi</h4>
-                            </div>
-                            <div class="hover:text-primary cursor-pointer">
-                                <h4>Espandi</h4>
-                            </div>
-                            <div class="hover:text-primary cursor-pointer">
-                                <h4>Spegni le luci</h4>
-                            </div>
+                            <!-- WatchList -->
+                            <button onclick="handleWatchList()" class="hover:text-primary cursor-pointer flex relative">
+                                <svg fill="#dedede" width="17px" height="17px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24">
+
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    
+                                    <g id="SVGRepo_iconCarrier">
+                                    
+                                    <path d="M19,4h-1V3c0-0.6-0.4-1-1-1s-1,0.4-1,1v1H8V3c0-0.6-0.4-1-1-1S6,2.4,6,3v1H5C3.3,4,2,5.3,2,7v1h20V7C22,5.3,20.7,4,19,4z M2,19c0,1.7,1.3,3,3,3h14c1.7,0,3-1.3,3-3v-9H2V19z M17,12c0.6,0,1,0.4,1,1s-0.4,1-1,1s-1-0.4-1-1S16.4,12,17,12z M17,16c0.6,0,1,0.4,1,1s-0.4,1-1,1s-1-0.4-1-1S16.4,16,17,16z M12,12c0.6,0,1,0.4,1,1s-0.4,1-1,1s-1-0.4-1-1S11.4,12,12,12z M12,16c0.6,0,1,0.4,1,1s-0.4,1-1,1s-1-0.4-1-1S11.4,16,12,16z M7,12c0.6,0,1,0.4,1,1s-0.4,1-1,1s-1-0.4-1-1S6.4,12,7,12z M7,16c0.6,0,1,0.4,1,1s-0.4,1-1,1s-1-0.4-1-1S6.4,16,7,16z"/>
+                                    
+                                    </g>
+                                    
+                                    </svg>
+
+                                    <div class="absolute hidden watchlist bg-secondary dark:bg-bgdark sm:top-8 top-5 sm:-left-8 right-5 rounded-md min-w-[13vw] space-y-1 ">
+                                        <div class="flex items-center space-x-2 hover:bg-black opacity-70 p-1 px-4 rounded-md text-sm">
+                                            <svg width="17px" height="17px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                
+                                                <g id="SVGRepo_iconCarrier">
+                                                
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 12c0-2.25 3.75-7.5 10.5-7.5S22.5 9.75 22.5 12s-3.75 7.5-10.5 7.5S1.5 14.25 1.5 12zM12 16.75a4.75 4.75 0 1 0 0-9.5 4.75 4.75 0 0 0 0 9.5zM14.7 12a2.7 2.7 0 1 1-5.4 0 2.7 2.7 0 0 1 5.4 0z" fill="#dedede"/>
+                                                
+                                                </g>
+                                                
+                                                </svg>
+                                            <h1 class="dark:text-gray-300 w-fit">In Corso</h1>
+                                        </div>
+                                        <!-- Compelati -->
+                                        <div class="flex items-center space-x-2 hover:bg-black opacity-70 p-1 px-4 rounded-md text-sm">
+                                            <svg width="17px" height="17px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                
+                                                <g id="SVGRepo_iconCarrier"> <g id="Interface / Check_Big"> <path id="Vector" d="M4 12L8.94975 16.9497L19.5572 6.34326" stroke="#dedede" stroke-width="1.7280000000000002" stroke-linecap="round" stroke-linejoin="round"/> </g> </g>
+                                                
+                                                </svg>
+                                            <h1 class="dark:text-gray-300 w-fit">Compelati</h1>
+                                        </div>
+                                        <!-- In Pausa -->
+                                        <div class="flex items-center space-x-2 hover:bg-black opacity-70 p-1 px-4 rounded-md text-sm">
+                                            <svg fill="#dedede" width="17px" height="17px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg" stroke="#dedede" stroke-width="0.00256">
+
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                
+                                                <g id="SVGRepo_iconCarrier"> <path d="M200,80H184V64a31.97943,31.97943,0,0,0-56-21.13208A31.97443,31.97443,0,0,0,72.20508,60.4231,31.978,31.978,0,0,0,24,88v40a104,104,0,0,0,208,0V112A32.03635,32.03635,0,0,0,200,80ZM152,48a16.01833,16.01833,0,0,1,16,16V80H136V64A16.01833,16.01833,0,0,1,152,48ZM88,64a16,16,0,0,1,32,0v40a16,16,0,0,1-32,0V64ZM40,88a16,16,0,0,1,32,0v16a16,16,0,0,1-32,0Zm88,128a88.10627,88.10627,0,0,1-87.9209-84.249A31.94065,31.94065,0,0,0,80,125.13208a31.92587,31.92587,0,0,0,44.58057,3.34595,32.23527,32.23527,0,0,0,11.79443,11.4414A47.906,47.906,0,0,0,120,176a8,8,0,0,0,16,0,32.03635,32.03635,0,0,1,32-32,8,8,0,0,0,0-16H152a16.01833,16.01833,0,0,1-16-16V96h64a16.01833,16.01833,0,0,1,16,16v16A88.09957,88.09957,0,0,1,128,216Z"/> </g>
+                                                
+                                                </svg>
+                                            <h1 class="dark:text-gray-300 w-fit">In pausa</h1>
+                                        </div>
+                                        <!-- Droppati -->
+                                        <div class="flex items-center space-x-2 hover:bg-black opacity-70 p-1 px-4 rounded-md text-sm">
+                                            <svg width="17px" height="17px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003">
+
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                
+                                                <g id="SVGRepo_iconCarrier"> <path d="M21.2714 9.17834C20.9814 8.71834 20.6714 8.28834 20.3514 7.88834C19.9814 7.41834 19.2814 7.37834 18.8614 7.79834L15.8614 10.7983C16.0814 11.4583 16.1214 12.2183 15.9214 13.0083C15.5714 14.4183 14.4314 15.5583 13.0214 15.9083C12.2314 16.1083 11.4714 16.0683 10.8114 15.8483C10.8114 15.8483 9.38141 17.2783 8.35141 18.3083C7.85141 18.8083 8.01141 19.6883 8.68141 19.9483C9.75141 20.3583 10.8614 20.5683 12.0014 20.5683C13.7814 20.5683 15.5114 20.0483 17.0914 19.0783C18.7014 18.0783 20.1514 16.6083 21.3214 14.7383C22.2714 13.2283 22.2214 10.6883 21.2714 9.17834Z" fill="#dedede"/> <path d="M14.0206 9.98062L9.98062 14.0206C9.47062 13.5006 9.14062 12.7806 9.14062 12.0006C9.14062 10.4306 10.4206 9.14062 12.0006 9.14062C12.7806 9.14062 13.5006 9.47062 14.0206 9.98062Z" fill="#dedede"/> <path d="M18.25 5.74969L14.86 9.13969C14.13 8.39969 13.12 7.95969 12 7.95969C9.76 7.95969 7.96 9.76969 7.96 11.9997C7.96 13.1197 8.41 14.1297 9.14 14.8597L5.76 18.2497H5.75C4.64 17.3497 3.62 16.1997 2.75 14.8397C1.75 13.2697 1.75 10.7197 2.75 9.14969C3.91 7.32969 5.33 5.89969 6.91 4.91969C8.49 3.95969 10.22 3.42969 12 3.42969C14.23 3.42969 16.39 4.24969 18.25 5.74969Z" fill="#dedede"/> <path d="M14.8581 11.9981C14.8581 13.5681 13.5781 14.8581 11.9981 14.8581C11.9381 14.8581 11.8881 14.8581 11.8281 14.8381L14.8381 11.8281C14.8581 11.8881 14.8581 11.9381 14.8581 11.9981Z" fill="#dedede"/> <path d="M21.7689 2.22891C21.4689 1.92891 20.9789 1.92891 20.6789 2.22891L2.22891 20.6889C1.92891 20.9889 1.92891 21.4789 2.22891 21.7789C2.37891 21.9189 2.56891 21.9989 2.76891 21.9989C2.96891 21.9989 3.15891 21.9189 3.30891 21.7689L21.7689 3.30891C22.0789 3.00891 22.0789 2.52891 21.7689 2.22891Z" fill="#dedede"/> </g>
+                                                
+                                                </svg>
+                                            <h1 class="dark:text-gray-300 w-fit">Dropati</h1>
+                                        </div>
+                                        <!-- Da guardare -->
+                                        <div class="flex items-center space-x-2 hover:bg-black opacity-70 p-1 px-4 rounded-md text-sm">
+                                            <svg width="17px" height="17px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                
+                                                <g id="SVGRepo_iconCarrier"> <title>bookmark_fill [#1227]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke-width="0.0002" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-265.000000, -2679.000000)" fill="#dedede"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M219,2521 L219,2537.998 C219,2538.889 217.923,2539.335 217.293,2538.705 L214.707,2536.119 C214.317,2535.729 213.683,2535.729 213.293,2536.119 L210.707,2538.705 C210.077,2539.335 209,2538.889 209,2537.998 L209,2521 C209,2519.895 209.895,2519 211,2519 L217,2519 C218.105,2519 219,2519.895 219,2521" id="bookmark_fill-[#1227]"> </path> </g> </g> </g> </g>
+                                                
+                                                </svg>
+                                            <h1 class="dark:text-gray-300 w-fit">Da guardare</h1>
+                                        </div>
+                                        <!-- Modifice -->
+                                        <div class="flex items-center space-x-2 border-t-2 border-b-2 border-gray-500 hover:bg-black opacity-70 p-1 px-4 pt-2 pb-2 text-sm">
+                                            <svg width="17px" height="17px" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill="none">
+
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                                
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                                
+                                                <g id="SVGRepo_iconCarrier">
+                                                
+                                                <path d="m104.175 90.97-4.252 38.384 38.383-4.252L247.923 15.427V2.497L226.78-18.646h-12.93zm98.164-96.96 31.671 31.67" class="cls-1" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#dedede;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1" transform="translate(-77.923 40.646)"/>
+                                                
+                                                <path d="m195.656 33.271-52.882 52.882" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#dedede;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:5;stroke-dasharray:none;stroke-opacity:1" transform="translate(-77.923 40.646)"/>
+                                                
+                                                </g>
+                                                
+                                                </svg>
+                                            <h1 class="dark:text-gray-300 w-fit">Modifice avanzate</h1>
+                                        </div>
+                                       <!-- Rimuovi da lista -->
+                                       <div class="flex items-center space-x-2 hover:bg-black opacity-70 p-1 px-4 rounded-md text-sm">
+                                        <svg width="17px" height="17px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" stroke-width="0.01024">
+
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                            
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                            
+                                            <g id="SVGRepo_iconCarrier">
+                                            
+                                            <path fill="#dedede" d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z"/>
+                                            
+                                            </g>
+                                            
+                                            </svg>
+                                        <h1 class="dark:text-gray-300 w-fit">Rimuovi da lista</h1>
+                                    </div>
+                                    </div>
+                                <h4 class="hidden md:block">Watchlist</h4>
+                                </button>
+                            <!-- Share -->
+                            <button onclick="handleShareButton()" class="hover:text-primary cursor-pointer flex">
+                                <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003">
+
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    
+                                    <g id="SVGRepo_iconCarrier"> <path d="M15.4306 7.70172C7.55045 7.99826 3.43929 15.232 2.17021 19.3956C2.07701 19.7014 2.31139 20 2.63107 20C2.82491 20 3.0008 19.8828 3.08334 19.7074C6.04179 13.4211 12.7066 12.3152 15.514 12.5639C15.7583 12.5856 15.9333 12.7956 15.9333 13.0409V15.1247C15.9333 15.5667 16.4648 15.7913 16.7818 15.4833L20.6976 11.6784C20.8723 11.5087 20.8993 11.2378 20.7615 11.037L16.8456 5.32965C16.5677 4.92457 15.9333 5.12126 15.9333 5.61253V7.19231C15.9333 7.46845 15.7065 7.69133 15.4306 7.70172Z" fill="#dedede" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round"/> </g>
+                                    
+                                    </svg>
+                                <h4 class="hidden md:block">VCondividi</h4>
+                                </button>
+                            <!-- Expand -->
+                            <button onclick="handleExpand()" class="hover:text-primary cursor-pointer flex">
+                                <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    
+                                    <g id="SVGRepo_iconCarrier"> <g id="Arrow / Expand"> <path id="Vector" d="M10 19H5V14M14 5H19V10" stroke="#dedede" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g> </g>
+                                    
+                                    </svg>
+                                <h4 class="hidden md:block">Espandi</h4>
+                            </button>
+                            <!-- Bulb -->
+                            <button onclick="handleBulb()" class="hover:text-primary cursor-pointer flex relative ">
+                                <svg class="hidden bulbs relative" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+        
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+        
+                                    <g id="SVGRepo_iconCarrier"> <path d="M12 7C9.23858 7 7 9.23858 7 12C7 13.3613 7.54402 14.5955 8.42651 15.4972C8.77025 15.8484 9.05281 16.2663 9.14923 16.7482L9.67833 19.3924C9.86537 20.3272 10.6862 21 11.6395 21H12.3605C13.3138 21 14.1346 20.3272 14.3217 19.3924L14.8508 16.7482C14.9472 16.2663 15.2297 15.8484 15.5735 15.4972C16.456 14.5955 17 13.3613 17 12C17 9.23858 14.7614 7 12 7Z" stroke="#dedede" stroke-width="1.104"/> <path d="M10 17H14" stroke="#dedede" stroke-width="1.104" stroke-linecap="round" stroke-linejoin="round"/> </g>
+        
+                                    </svg>
+
+                                    <svg class=" bulbs relative" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <g id="SVGRepo_iconCarrier"> <path d="M12 7C9.23858 7 7 9.23858 7 12C7 13.3613 7.54402 14.5955 8.42651 15.4972C8.77025 15.8484 9.05281 16.2663 9.14923 16.7482L9.67833 19.3924C9.86537 20.3272 10.6862 21 11.6395 21H12.3605C13.3138 21 14.1346 20.3272 14.3217 19.3924L14.8508 16.7482C14.9472 16.2663 15.2297 15.8484 15.5735 15.4972C16.456 14.5955 17 13.3613 17 12C17 9.23858 14.7614 7 12 7Z" stroke="#dedede" stroke-width="1.272"/> <path d="M12 4V3" stroke="#dedede" stroke-width="1.272" stroke-linecap="round" stroke-linejoin="round"/> <path d="M18 6L19 5" stroke="#dedede" stroke-width="1.272" stroke-linecap="round" stroke-linejoin="round"/> <path d="M20 12H21" stroke="#dedede" stroke-width="1.272" stroke-linecap="round" stroke-linejoin="round"/> <path d="M4 12H3" stroke="#dedede" stroke-width="1.272" stroke-linecap="round" stroke-linejoin="round"/> <path d="M5 5L6 6" stroke="#dedede" stroke-width="1.272" stroke-linecap="round" stroke-linejoin="round"/> <path d="M10 17H14" stroke="#dedede" stroke-width="1.272" stroke-linecap="round" stroke-linejoin="round"/> </g>
+                                        </svg>
+                                <h4 class="hidden md:block">Spegni le luci</h4>
+                            </button>
                         </div>
-                        <div class="md:flex grid grid-cols-2 justify-items-start space-x-4 text-gray-600 text-sm dark:text-gray-400">
-                            <div class="flex space-x-1 hover:bg-gray-200 px-2 py-1 items-center cursor-pointer">
-                                <h2>Segnala</h2>
-                            </div>
+                        <div class="flex flex-wrap justify-items-start space-x-2 text-gray-600 text-sm dark:text-gray-400">
+                            <button onclick="handleReport()" class="flex space-x-1 hover:bg-gray-200 px-2 py-1 items-center cursor-pointer">
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003">
+
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                    
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                    
+                                    <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6247 5.21914C11.0416 3.95267 9.18319 3.99214 7.85649 4.27145C7.04755 4.44175 6.22551 4.72012 5.50386 5.13176C5.19228 5.30981 5 5.64115 5 6.00001V20C5 20.5523 5.44772 21 6 21C6.55228 21 7 20.5523 7 20V14.6294C8.37617 14.0493 10.124 13.7799 11.3753 14.7809C12.9584 16.0473 14.8168 16.0079 16.1435 15.7286C17.1559 15.5154 17.9441 15.1521 18.2954 14.9747C18.6869 14.7771 19 14.4734 19 14V6.00001C19 5.64353 18.8102 5.31402 18.5019 5.13509C18.1938 4.95629 17.8144 4.95462 17.505 5.13114L17.5041 5.13162C16.0661 5.91734 14.0013 6.32045 12.6247 5.21914ZM7 6.62938V12.499C8.88136 11.8968 11.021 11.9362 12.6247 13.2191C13.5416 13.9527 14.6832 13.9922 15.7315 13.7715C16.2336 13.6657 16.6769 13.5068 17 13.3706V7.50105C16.739 7.5846 16.4511 7.6638 16.1435 7.72856C14.8168 8.00787 12.9584 8.04734 11.3753 6.78087C10.124 5.77986 8.37617 6.04932 7 6.62938Z" fill="#dedede"/> </g>
+                                    
+                                    </svg>
+                                <h2 class="hidden md:block">Segnala</h2>
+                            </button >
                             <div class="flex space-x-1 hover:bg-gray-200 px-2 py-1 items-center cursor-pointer">
                                 <svg width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="512" cy="512" r="512" style="fill:#2e51a2"/>
                                     <path d="M432.49 410.61V590.3l-44.86-.06V479l-43.31 51.29-42.43-52.44-.43 112.75H256V410.65h47l39.79 54.29 43-54.31zm184.06 44.14.53 135.15h-50.45l-.17-61.25h-59.73c1.49 10.65 4.48 27 8.9 38 3.31 8.13 6.36 16 12.44 24.06l-36.37 24c-7.45-13.57-13.27-28.52-18.73-44.42a198.31 198.31 0 0 1-10.82-46.49c-1.81-16-2.07-31.38 2.28-47.19a83.37 83.37 0 0 1 24.77-39.81c6.68-6.25 16-10.67 23.47-14.66s15.85-5.63 23.62-7.66a158 158 0 0 1 25.41-3.9c8.49-.73 23.62-1.41 51-.6l11.63 37.31h-58.78c-12.65.17-18.73 0-28.61 4.46a47.7 47.7 0 0 0-27.26 41l56.81.7.81-38.61h49.26zM701.72 410v141.35L768 552l-9.17 37.87H656.28V409.33z" style="fill:#fff"/>
                                  </svg>
-                                <h2>AnimeList</h2>
+                                <h2 class="hidden md:block">AnimeList</h2>
                             </div>
                             <div class="flex space-x-1 hover:bg-gray-200 px-2 py-1 items-center cursor-pointer">
                                 <svg fill="#000000" width="20px" height="20px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M6.361 2.943 0 21.056h4.942l1.077-3.133H11.4l1.052 3.133H22.9c.71 0 1.1-.392 1.1-1.101V17.53c0-.71-.39-1.101-1.1-1.101h-6.483V4.045c0-.71-.392-1.102-1.101-1.102h-2.422c-.71 0-1.101.392-1.101 1.102v1.064l-.758-2.166zm2.324 5.948 1.688 5.018H7.144z"/></svg>
-                                <h2>AniList</h2>
+                                <h2 class="hidden md:block">AniList</h2>
                             </div>
                             <div class="flex space-x-1 hover:bg-gray-200 px-2 py-1 items-center cursor-pointer">
                                 <svg width="20px" height="20px" viewBox="0 -3 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
@@ -296,12 +501,71 @@
                                     <g id="SVGRepo_iconCarrier"> <title>youtube [#168]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7442.000000)" fill="#ff0000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M251.988432,7291.58588 L251.988432,7285.97425 C253.980638,7286.91168 255.523602,7287.8172 257.348463,7288.79353 C255.843351,7289.62824 253.980638,7290.56468 251.988432,7291.58588 M263.090998,7283.18289 C262.747343,7282.73013 262.161634,7282.37809 261.538073,7282.26141 C259.705243,7281.91336 248.270974,7281.91237 246.439141,7282.26141 C245.939097,7282.35515 245.493839,7282.58153 245.111335,7282.93357 C243.49964,7284.42947 244.004664,7292.45151 244.393145,7293.75096 C244.556505,7294.31342 244.767679,7294.71931 245.033639,7294.98558 C245.376298,7295.33761 245.845463,7295.57995 246.384355,7295.68865 C247.893451,7296.0008 255.668037,7296.17532 261.506198,7295.73552 C262.044094,7295.64178 262.520231,7295.39147 262.895762,7295.02447 C264.385932,7293.53455 264.28433,7285.06174 263.090998,7283.18289" id="youtube-[#168]"> </path> </g> </g> </g> </g>
                                     
                                     </svg>
-                                <h2>Trailer</h2>
+                                <h2 class="hidden md:block">Trailer</h2>
                             </div>
                         </div>
                     </div>
-                    <!-- Countdown -->
-                    <div class="px-2 py-1 bg-primary flex items-center space-x-3 text-white">
+                    <!-- Share options -->
+                    <div class="bg-secondary share absolute w-full -z-50 dark:bg-darksecondary flex flex-col items-center justify-center p-2">
+                        <h1 class="text-primary dark:text-gray-300 font-medium text-xl">Condividi la serie con i tuoi amici!</h1>
+                        <div class="flex space-x-2 items-center mt-3">
+                            <!-- WhatApp -->
+                            <button onclick="handleShareOption()">
+                                <svg width="30px" height="30px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+                                    <title>Whatsapp-color</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <defs>
+                                
+                                </defs>
+                                    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Color-" transform="translate(-700.000000, -360.000000)" fill="#67C15E">
+                                            <path d="M723.993033,360 C710.762252,360 700,370.765287 700,383.999801 C700,389.248451 701.692661,394.116025 704.570026,398.066947 L701.579605,406.983798 L710.804449,404.035539 C714.598605,406.546975 719.126434,408 724.006967,408 C737.237748,408 748,397.234315 748,384.000199 C748,370.765685 737.237748,360.000398 724.006967,360.000398 L723.993033,360.000398 L723.993033,360 Z M717.29285,372.190836 C716.827488,371.07628 716.474784,371.034071 715.769774,371.005401 C715.529728,370.991464 715.262214,370.977527 714.96564,370.977527 C714.04845,370.977527 713.089462,371.245514 712.511043,371.838033 C711.806033,372.557577 710.056843,374.23638 710.056843,377.679202 C710.056843,381.122023 712.567571,384.451756 712.905944,384.917648 C713.258648,385.382743 717.800808,392.55031 724.853297,395.471492 C730.368379,397.757149 732.00491,397.545307 733.260074,397.27732 C735.093658,396.882308 737.393002,395.527239 737.971421,393.891043 C738.54984,392.25405 738.54984,390.857171 738.380255,390.560912 C738.211068,390.264652 737.745308,390.095816 737.040298,389.742615 C736.335288,389.389811 732.90737,387.696673 732.25849,387.470894 C731.623543,387.231179 731.017259,387.315995 730.537963,387.99333 C729.860819,388.938653 729.198006,389.89831 728.661785,390.476494 C728.238619,390.928051 727.547144,390.984595 726.969123,390.744481 C726.193254,390.420348 724.021298,389.657798 721.340985,387.273388 C719.267356,385.42535 717.856938,383.125756 717.448104,382.434484 C717.038871,381.729275 717.405907,381.319529 717.729948,380.938852 C718.082653,380.501232 718.421026,380.191036 718.77373,379.781688 C719.126434,379.372738 719.323884,379.160897 719.549599,378.681068 C719.789645,378.215575 719.62006,377.735746 719.450874,377.382942 C719.281687,377.030139 717.871269,373.587317 717.29285,372.190836 Z" id="Whatsapp">
+                                
+                                </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                            <!-- Telegram -->
+                            <button onclick="handleShareOption()">
+                                <svg width="35px" height="35px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="16" r="14" fill="url(#paint0_linear_87_7225)"/>
+                                    <path d="M22.9866 10.2088C23.1112 9.40332 22.3454 8.76755 21.6292 9.082L7.36482 15.3448C6.85123 15.5703 6.8888 16.3483 7.42147 16.5179L10.3631 17.4547C10.9246 17.6335 11.5325 17.541 12.0228 17.2023L18.655 12.6203C18.855 12.4821 19.073 12.7665 18.9021 12.9426L14.1281 17.8646C13.665 18.3421 13.7569 19.1512 14.314 19.5005L19.659 22.8523C20.2585 23.2282 21.0297 22.8506 21.1418 22.1261L22.9866 10.2088Z" fill="white"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_87_7225" x1="16" y1="2" x2="16" y2="30" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#37BBFE"/>
+                                    <stop offset="1" stop-color="#007DBB"/>
+                                    </linearGradient>
+                                    </defs>
+                                    </svg>
+                            </button>
+                            <!-- Twitter -->
+                            <button onclick="handleShareOption()">
+                                <svg width="40px" height="40px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="24" cy="24" r="20" fill="#1DA1F2"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M36 16.3086C35.1177 16.7006 34.1681 16.9646 33.1722 17.0838C34.1889 16.4742 34.9697 15.5095 35.3368 14.36C34.3865 14.9247 33.3314 15.3335 32.2107 15.5551C31.3123 14.5984 30.0316 14 28.6165 14C25.8975 14 23.6928 16.2047 23.6928 18.9237C23.6928 19.3092 23.7368 19.6852 23.8208 20.046C19.7283 19.8412 16.1005 17.8805 13.6719 14.9015C13.2479 15.6287 13.0055 16.4742 13.0055 17.3766C13.0055 19.0845 13.8735 20.5916 15.1958 21.4747C14.3878 21.4491 13.6295 21.2275 12.9647 20.8587V20.9203C12.9647 23.3066 14.663 25.296 16.9141 25.7496C16.5013 25.8616 16.0661 25.9224 15.6174 25.9224C15.2998 25.9224 14.991 25.8912 14.6902 25.8336C15.3166 27.7895 17.1357 29.2134 19.2899 29.2534C17.6052 30.5733 15.4822 31.3612 13.1751 31.3612C12.7767 31.3612 12.3848 31.338 12 31.2916C14.1791 32.6884 16.7669 33.5043 19.5475 33.5043C28.6037 33.5043 33.5562 26.0016 33.5562 19.4956C33.5562 19.282 33.5522 19.0693 33.5418 18.8589C34.5049 18.1629 35.34 17.2958 36 16.3086Z" fill="white"/>
+                                    </svg>
+                            </button>
+                            <!-- Facebook -->
+                            <button onclick="handleShareOption()">
+                                <svg width="37px" height="37px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="#1877F2" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#ffffff" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
+                            </button>
+                            <!-- LinkedIn -->
+                            <button onclick="handleShareOption()">
+                                <svg width="38px" height="38px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="2" width="28" height="28" rx="14" fill="#1275B1"/>
+                                    <path d="M12.6186 9.69215C12.6186 10.6267 11.8085 11.3843 10.8093 11.3843C9.81004 11.3843 9 10.6267 9 9.69215C9 8.7576 9.81004 8 10.8093 8C11.8085 8 12.6186 8.7576 12.6186 9.69215Z" fill="white"/>
+                                    <path d="M9.24742 12.6281H12.3402V22H9.24742V12.6281Z" fill="white"/>
+                                    <path d="M17.3196 12.6281H14.2268V22H17.3196C17.3196 22 17.3196 19.0496 17.3196 17.2049C17.3196 16.0976 17.6977 14.9855 19.2062 14.9855C20.911 14.9855 20.9008 16.4345 20.8928 17.5571C20.8824 19.0244 20.9072 20.5219 20.9072 22H24V17.0537C23.9738 13.8954 23.1508 12.4401 20.4433 12.4401C18.8354 12.4401 17.8387 13.1701 17.3196 13.8305V12.6281Z" fill="white"/>
+                                    </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- translate -->
+                   <div class="space-y-2">
+                     <!-- Countdown -->
+                     <div class="px-2 py-1 bg-primary flex items-center space-x-3 text-white">
                         <svg width="30px" height="30px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#e8e8e8" fill="none">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"/>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
@@ -361,7 +625,8 @@
                             <h3>Download</h3>
                            
                         </div>
-                        <div class="sm:grid sm:grid-cols-2 items-center justify-items-center mt-5 space-y-3">
+                        <div class="sm:grid sm:grid-cols-2 items-center justify-items-center mt-5 space-y-3 sm:space-y-0">
+                        <a href="#">
                            <div class="bg-primary text-white py-1 rounded-sm px-3 flex items-center space-x-2">
                                 <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"/>
@@ -371,17 +636,20 @@
                                     </g>
                                 </svg>
                                 <p>Download Dirreto Eps-7</p>
-                           </div>
-                           <div class="bg-primary  text-white py-1 rounded-sm px-3 flex items-center space-x-2">
-                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <g id="SVGRepo_iconCarrier">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.163 2.819C9 3.139 9 3.559 9 4.4V11H7.803c-.883 0-1.325 0-1.534.176a.75.75 0 0 0-.266.62c.017.274.322.593.931 1.232l4.198 4.401c.302.318.453.476.63.535a.749.749 0 0 0 .476 0c.177-.059.328-.217.63-.535l4.198-4.4c.61-.64.914-.96.93-1.233a.75.75 0 0 0-.265-.62C17.522 11 17.081 11 16.197 11H15V4.4c0-.84 0-1.26-.164-1.581a1.5 1.5 0 0 0-.655-.656C13.861 2 13.441 2 12.6 2h-1.2c-.84 0-1.26 0-1.581.163a1.5 1.5 0 0 0-.656.656zM5 21a1 1 0 0 0 1 1h12a1 1 0 1 0 0-2H6a1 1 0 0 0-1 1z" fill="#f2f2f2"/>
-                                    </g>
-                                </svg>
-                                <p>Download DoodStream Eps-7</p>
-                           </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="bg-primary  text-white py-1 rounded-sm px-3 flex items-center space-x-2">
+                                 <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                     <g id="SVGRepo_iconCarrier">
+                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M9.163 2.819C9 3.139 9 3.559 9 4.4V11H7.803c-.883 0-1.325 0-1.534.176a.75.75 0 0 0-.266.62c.017.274.322.593.931 1.232l4.198 4.401c.302.318.453.476.63.535a.749.749 0 0 0 .476 0c.177-.059.328-.217.63-.535l4.198-4.4c.61-.64.914-.96.93-1.233a.75.75 0 0 0-.265-.62C17.522 11 17.081 11 16.197 11H15V4.4c0-.84 0-1.26-.164-1.581a1.5 1.5 0 0 0-.655-.656C13.861 2 13.441 2 12.6 2h-1.2c-.84 0-1.26 0-1.581.163a1.5 1.5 0 0 0-.656.656zM5 21a1 1 0 0 0 1 1h12a1 1 0 1 0 0-2H6a1 1 0 0 0-1 1z" fill="#f2f2f2"/>
+                                     </g>
+                                 </svg>
+                                 <p>Download DoodStream Eps-7</p>
+                            </div>
+                        </a>
                         </div>
                         <p class="text-primary text-center font-medium text-sm p-3">Se in alcune serie il tasto Download Diretto porta in una pagina 404, utilizzate il tasto Download Alternativo.</p>
                     </div>
@@ -434,11 +702,12 @@
                             </div>
                         </div>
                     </div>
+                   </div>
                 </section>
             </div>
             <!-- SIDEBAR -->
-            <div class="md:w-[30%] h-20 space-y-2">
-                <div class="p-2 bg-secondary dark:bg-darksecondary rounded-sm">
+            <div class="md:w-[30%] h-20 space-y-2 sm:-translate-y-[69vh] sidebars ease-in duration-200">
+                <div class="p-2 bg-secondary dark:bg-darksecondary rounded-sm mt-2">
                     <div class="pb-2 text-primary border-b-[2px] dark:border-gray-800 dark:text-gray-300 border-gray-300">
                         <h3>RELATED</h3>
                     </div>
@@ -527,6 +796,7 @@
             </div>
         </div>
     </main>
+    
     <footer>
         <div class="bg-footer p-5 mt-8 hidden md:block">
             <div class="max-w-5xl mx-auto space-y-4">
@@ -635,6 +905,16 @@
     </footer>
     <script>
         const auth = document.querySelectorAll('.auth')
+        const visible = document.querySelector('.home-visible')
+        const alertt = document.querySelector('#alert')
+        const genre = document.querySelector('.genre-visible')
+        const genreSvg = document.querySelector('.svg-genre')
+        const mobileNav = document.querySelector('.mobile-nav')
+        const checkbox = document.getElementById('toggle');
+        const watchlist = document.querySelector('.watchlist')
+        const modals = document.querySelector('.modals')
+
+
         const login = `<a href="login.html"> <div class="cursor-pointer">
                               <svg class="dark:fill-gray-300" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px" viewBox="0 0 24 24" width="30px" fill="#000000"><g><rect fill="none" height="30" width="30"/></g><g><g><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5zm10.79-1.38C16.45 15.8 14.32 15 12 15s-4.45.8-6.14 2.12C4.7 15.73 4 13.95 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12z"/><path d="M12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/></g></g></svg>
                           </div> </a>`
@@ -642,8 +922,9 @@
                             <img class="w-12 h-12 rounded-full border-2 border-primary" src="../../assets/img/default_avatar.png" alt="">
                             <p class="text-black dark:text-gray-300 font-medium">jhondoe</p>
                         </button>`
+                               
         for (let i = 0; i < auth.length; i++) {
-            if (localStorage.getItem('email') && localStorage.getItem('password')) {
+            if (localStorage.getItem('email') && localStorage.getItem('')) {
                 auth[i].innerHTML = user;
             } else {
                 auth[i].innerHTML = login;
@@ -668,13 +949,27 @@
 
             window.location.href = 'login.html'
         }
-        const visible = document.querySelector('.home-visible')
-        const alertt = document.querySelector('#alert')
-        const genre = document.querySelector('.genre-visible')
-        const genreSvg = document.querySelector('.svg-genre')
-        const mobileNav = document.querySelector('.mobile-nav')
+        
+        const handleShareButton = () => {
+            const share = document.querySelector('.share')
+            share.classList.toggle('absolute') 
+        }
 
-        const checkbox = document.getElementById('toggle');
+        const handleReport = () => {
+            modals.classList.toggle('-translate-y-[200%]')
+        }
+
+        const handleWatchList = () => {
+            watchlist.classList.toggle('hidden')
+        }
+
+        const handleExpand = () => {
+            const players = document.querySelector('.players')
+            const sidebars = document.querySelector('.sidebars')
+            players.classList.toggle('md:w-[70%]')
+            sidebars.classList.toggle('sm:-translate-y-[69vh]')
+        }
+
         const body = document.documentElement;
         const dot = document.querySelector('.dot');
         let dark = localStorage.getItem('dark') === 'true';
@@ -724,7 +1019,17 @@
         document.getElementById(tabName).style.display = "flex";
         evt.currentTarget.className += " active";
         }
+        function handleBulb() {
+            const bulbs = document.querySelectorAll('.bulbs');
 
+            bulbs.forEach((bulb) => {
+                if (bulb.classList.contains('hidden')) {
+                bulb.classList.remove('hidden');
+                } else {
+                bulb.classList.add('hidden');
+                }
+            });
+        }
         // Set the default tab to be active
         document.getElementById("defaultOpen").click();
         const stars = document.querySelectorAll('.star');
