@@ -51,12 +51,35 @@
                       </div>
                       <!-- User -->
                     <div class="relative">
-                        <div class="auth hidden sm:block ">
+                        <div class="auth hidden md:block ">
                         </div>
-                        <div class="absolute z-50 w-fit rounded-sm mr-2 bg-secondary p-1 px-3 hidden auth-drop">
-                            <ul class="flex flex-col">
-                                <li class="font-medium"><a href="dashboard.html">dashboard</a></li>
-                                <li class="font-medium"><button onclick="handleAuthLogout()">logout</button></li>
+                        <div class="absolute opacity-0 md:opacity-100 z-50 w-fit rounded-sm mr-2 bg-secondary p-1 px-3 hidden auth-drop ">
+                            <ul class="flex flex-col space-y-2">
+                                <li >
+                                    <a class="flex items-center space-x-2" href="dashboard.html">
+                                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.1" d="M8.976 3C4.05476 3 3 4.05476 3 8.976V15.024C3 19.9452 4.05476 21 8.976 21H9V9H21V8.976C21 4.05476 19.9452 3 15.024 3H8.976Z" fill="#323232"/>
+                                        <path d="M3 8.976C3 4.05476 4.05476 3 8.976 3H15.024C19.9452 3 21 4.05476 21 8.976V15.024C21 19.9452 19.9452 21 15.024 21H8.976C4.05476 21 3 19.9452 3 15.024V8.976Z" stroke="#323232" stroke-width="2"/>
+                                        <path d="M21 9L3 9" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9 21L9 9" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <h1 class="text-black">dashboard</h1>
+                                    </a>
+                                </li>
+                                <li >
+                                    <button class="flex items-center space-x-2" onclick="handleAuthLogout()">
+                                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                            
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                            
+                                            <g id="SVGRepo_iconCarrier"> <path d="M21 12L13 12" stroke="#f00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M18 15L20.913 12.087V12.087C20.961 12.039 20.961 11.961 20.913 11.913V11.913L18 9" stroke="#f00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M16 5V4.5V4.5C16 3.67157 15.3284 3 14.5 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H14.5C15.3284 21 16 20.3284 16 19.5V19.5V19" stroke="#f00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+                                            
+                                            </svg>
+                                    <h1 class="text-black ">logout</h1>
+                                    </button>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -104,9 +127,40 @@
         <!-- Mobile Navbar -->
         <div class="mobile-nav absolute w-[45vh] h-screen bg-primary -translate-x-full ease-in-out duration-200 top-0 z-50 p-3 text-white">
             <!-- Title Navbar -->
-            <div class="flex items-center space-x-5">
-                <h3>Menu</h3>
-                <div class="w-[60%] h-[2px] bg-white mt-1"></div>
+            <div class="flex items-center justify-between">
+                <div class="relative">
+                    <div class="auth block md:hidden ">
+                    </div>
+                    <div class="absolute z-50 w-fit rounded-md mr-2 bg-secondary p-1 px-3 hidden auth-drop ">
+                        <ul class="flex flex-col space-y-2">
+                            <li >
+                                <a class="flex items-center space-x-2" href="dashboard.html">
+                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.1" d="M8.976 3C4.05476 3 3 4.05476 3 8.976V15.024C3 19.9452 4.05476 21 8.976 21H9V9H21V8.976C21 4.05476 19.9452 3 15.024 3H8.976Z" fill="#323232"/>
+                                    <path d="M3 8.976C3 4.05476 4.05476 3 8.976 3H15.024C19.9452 3 21 4.05476 21 8.976V15.024C21 19.9452 19.9452 21 15.024 21H8.976C4.05476 21 3 19.9452 3 15.024V8.976Z" stroke="#323232" stroke-width="2"/>
+                                    <path d="M21 9L3 9" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9 21L9 9" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <h1 class="text-black">dashboard</h1>
+                                </a>
+                            </li>
+                            <li >
+                                <button class="flex items-center space-x-2" onclick="handleAuthLogout()">
+                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                        
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                        
+                                        <g id="SVGRepo_iconCarrier"> <path d="M21 12L13 12" stroke="#f00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M18 15L20.913 12.087V12.087C20.961 12.039 20.961 11.961 20.913 11.913V11.913L18 9" stroke="#f00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M16 5V4.5V4.5C16 3.67157 15.3284 3 14.5 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H14.5C15.3284 21 16 20.3284 16 19.5V19.5V19" stroke="#f00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+                                        
+                                        </svg>
+                                <h1 class="text-black">logout</h1>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <!-- close button -->
                 <button onclick="handleButtonNavbar()">
                     <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -693,21 +747,20 @@
         </div>
     </footer>
     <script>
-        const auth = document.querySelector('.auth')
-        const dropDown = document.querySelector('.auth-drop')
-
+       const auth = document.querySelectorAll('.auth')
         const login = `<a href="login.html"> <div class="cursor-pointer">
                               <svg class="dark:fill-gray-300" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="30px" viewBox="0 0 24 24" width="30px" fill="#000000"><g><rect fill="none" height="30" width="30"/></g><g><g><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5zm10.79-1.38C16.45 15.8 14.32 15 12 15s-4.45.8-6.14 2.12C4.7 15.73 4 13.95 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12z"/><path d="M12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/></g></g></svg>
                           </div> </a>`
         const user = `<button onclick="handleAuthDropdown()" class="flex items-center space-x-2">
                             <img class="w-12 h-12 rounded-full border-2 border-primary" src="../../assets/img/default_avatar.png" alt="">
-                            <p class="text-primary dark:text-gray-300 font-medium">jhondoe</p>
+                            <p class="text-black dark:text-gray-300 font-medium">jhondoe</p>
                         </button>`
-        if(localStorage.getItem('email') && localStorage.getItem('password')) {
-            auth.innerHTML = user
-            
-        } else {
-            auth.innerHTML = login
+        for (let i = 0; i < auth.length; i++) {
+            if (localStorage.getItem('email') && localStorage.getItem('password')) {
+                auth[i].innerHTML = user;
+            } else {
+                auth[i].innerHTML = login;
+            }
         }
         let data = [];
             var urlParams = new URLSearchParams(window.location.search);
@@ -716,7 +769,10 @@
         });
 
         const handleAuthDropdown = () => {
-           dropDown.classList.toggle('hidden')
+            const dropDown = document.querySelectorAll('.auth-drop')
+            dropDown.forEach(item => {
+                item.classList.toggle('hidden')
+            })
         }
 
         const handleAuthLogout = () => {
